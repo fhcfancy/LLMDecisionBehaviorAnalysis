@@ -1,0 +1,3 @@
+phase,n_total,three_step_choice_count,normal_cot_choice_count,three_step_choice_rate,normal_cot_choice_rate,rate_diff_three_minus_normal,both_made_choice,three_step_only,normal_only,neither_made_choice,discordant_pairs,mcnemar_cc_chi2,sign_test_two_sided_pvalue
+eventual,32640,32634,32604,0.9998161764705882,0.9988970588235294,0.0009191176470588235,32602,32,2,4,34,24.735294117647058,6.938353180885315e-08
+first_pass,32640,32630,32604,0.9996936274509803,0.9988970588235294,0.0007965686274509804,32598,32,6,4,38,16.44736842105263,2.4342560209333897e-05

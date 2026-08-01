@@ -1,0 +1,6 @@
+reason_bucket,count,rate_within_rescues
+json_present_only_in_three_step,1,1.0
+explicit_choice_only_in_three_step,0,0.0
+normal_refusal_three_step_not_refusal,0,0.0
+three_step_has_full_step_markers,0,0.0
+total_rescue_cases,1,1.0

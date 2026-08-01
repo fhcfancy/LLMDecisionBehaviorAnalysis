@@ -1,0 +1,3 @@
+variant,n_total,choice_rate_eventual,choice_rate_first_pass,retry_uplift_rate,api_success_rate,json_rate_eventual,json_rate_first_pass,refusal_rate_eventual,refusal_rate_first_pass
+three_step_cot,1360,1.0,1.0,0.0,1.0,1.0,1.0,0.9323529411764706,0.9303904923599321
+normal_cot,1360,0.9985294117647059,0.9985294117647059,0.0,1.0,0.9985294117647059,0.9985294117647059,0.0014705882352941176,0.001728608470181504
