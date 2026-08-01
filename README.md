@@ -6,13 +6,12 @@ Code and data for analyzing emotional vs. neutral decision-making in large langu
 
 | Folder | Description |
 |--------|-------------|
+| `Better/` | Main experiment pipeline and decision data: EA/EI/Neutral/Neutral-CoT decisions per model (3 runs each), action-bias swap experiments, CoT prompt comparison experiments, and analysis |
 | `Dilemma/` | Emotional dilemma datasets used across models (CN, CT, R1, V3, neutral variants) |
 | `DilemmaValidation/` | Validation pipeline: ranking analysis, reliability runs, report generation |
-| `EmoitonalAnalytic/` | Emotional-analytic (EA) decision data per model, 3 runs each |
-| `EmotionalIntuitive/` | Emotional-intuitive (EI) decision data per model, 3 runs each |
 | `Generalization/` | Generalization experiments: dilemma generation and decision generators (CoT, intuitive, neutral) |
-| `Neutral/` | Neutral (baseline) decision data per model |
-| `Software/` | Analysis software and shared utilities |
+
+Note: two aggregated experiment files (`Better/decisions/EmotionalAnalytic/experiments/cot_prompt_comparison_{CN,CT}.csv`) are not included because they exceed GitHub's 100MB file limit; the per-run files (`_run1`–`_run3`) they were aggregated from are included.
 
 ## Models
 
