@@ -1,5 +1,0 @@
-level,mode,strict_n_all_modes_both_valid,strict_preserved_count,strict_flipped_count,strict_match_rate,strict_flip_rate,strict_second_presented_choice_rate
-overall_by_mode,EA,4762,4495,267,94.39311213775724,5.606887862242755,49.212515749685004
-overall_by_mode,EI,4762,4505,257,94.60310793784124,5.396892062158757,48.204535909281816
-overall_by_mode,Neutral,4762,4453,309,93.51112977740445,6.488870222595548,47.994540109197814
-overall_by_mode,Neutral-CoT,4762,4499,263,94.47711045779084,5.522889542209156,49.54850902981941
