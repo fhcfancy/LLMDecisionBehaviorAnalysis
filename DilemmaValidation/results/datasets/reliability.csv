@@ -1,0 +1,9 @@
+variant,n_retest,rho_semantic_sim,rho_emotion_naturalness,rho_emotion_coherence,kappa_semantic_pass,mad_semantic_sim,mad_emotion_naturalness,mad_emotion_coherence,jaccard_emotions,low_reliability
+CN,34,0.7983,0.5798,0.8166,,0.0059,0.3235,0.0294,0.7676,True
+CT,34,0.6138,0.7809,0.5851,1.0,0.0088,0.2353,0.1471,0.8,True
+R1,33,0.1138,0.6795,0.8453,,0.0182,0.3333,0.1515,0.6848,True
+V3,34,0.718,0.7676,0.8344,0.0,0.0132,0.2059,0.1765,0.7559,False
+GPT_5,34,,0.8889,1.0,,0.0029,0.0588,0.0,0.7088,False
+GPT_o4,34,1.0,0.6481,0.8147,,0.0,0.2647,0.0882,0.7618,False
+QwenN,34,0.3302,0.817,0.5591,,0.0118,0.1176,0.1176,0.5941,True
+QwenT,34,0.7368,0.7349,0.8689,,0.0162,0.2941,0.1176,0.7412,False

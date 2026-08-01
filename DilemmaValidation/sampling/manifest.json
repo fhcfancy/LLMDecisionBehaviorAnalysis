@@ -1,0 +1,63 @@
+{
+  "drawn_at_iso": "2026-05-19T12:49:07+00:00",
+  "n_sampled_idx": 340,
+  "n_strata": 17,
+  "per_stratum": 20,
+  "seed": 20260514,
+  "sources": [
+    {
+      "model_tag": "NEUTRAL",
+      "role": "neutral",
+      "sha256": "b7ff51bbdb601284c801c577f97dd36671af7a5550fa13cb80bcdbec5121c7b5",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/NeutralDilemma.csv"
+    },
+    {
+      "model_tag": "CN",
+      "role": "emotional",
+      "sha256": "43c893bcd7e64570c0ba8e9584c6af4155a1045d5f9d38fae29bb8d09af726f1",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/CN_emotional_dilemma.csv"
+    },
+    {
+      "model_tag": "CT",
+      "role": "emotional",
+      "sha256": "8d173178e0b8d6d8cff8cd71a84437427afbb3871f252998c03b39f2bc1294b0",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/CT_emotional_dilemma.csv"
+    },
+    {
+      "model_tag": "R1",
+      "role": "emotional",
+      "sha256": "5199219bcf747120e4ee0284d5aa03409b5aa081f12a64d7186f7ece87ea9456",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/R1_emotional_dilemma.csv"
+    },
+    {
+      "model_tag": "V3",
+      "role": "emotional",
+      "sha256": "c43f084546cc450f48baea3060010825cb39fc12d3126bb669513c9705d79efa",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/V3_emotional_dilemma.csv"
+    },
+    {
+      "model_tag": "GPT_5",
+      "role": "emotional",
+      "sha256": "c4fb084a2a7033f515fe26a8a4d08c9ba2aba150d4da0e0dd71ab34bae3bbb8b",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/generated_emotional_dilemmas/GPT_5_emmotional_dilemma.csv"
+    },
+    {
+      "model_tag": "GPT_o4",
+      "role": "emotional",
+      "sha256": "9b1dfdcea2f8fab47fa38b749f52509ae67c2c9b23e62401ce83865dfd451845",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/generated_emotional_dilemmas/GPT_o4_emmotional_dilemma.csv"
+    },
+    {
+      "model_tag": "QwenN",
+      "role": "emotional",
+      "sha256": "770f8276f2a35fa9bafba8a9e3d59f086cfd14456f20c690c92d73c205f8f20d",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/generated_emotional_dilemmas/QwenN_emotional_dilemma.csv"
+    },
+    {
+      "model_tag": "QwenT",
+      "role": "emotional",
+      "sha256": "fa65d12d348baf95c4c0cea2464d761dd4a5024d5ef55c5549c6a5224a7a00d2",
+      "source_path": "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/generated_emotional_dilemmas/QwenT_emotional_dilemma.csv"
+    }
+  ]
+}

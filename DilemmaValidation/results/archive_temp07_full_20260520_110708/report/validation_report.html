@@ -1,0 +1,1831 @@
+<!doctype html><meta charset='utf-8'>
+<title>Dilemma Validation Report</title>
+<style>body{font-family:system-ui;max-width:1000px;margin:2em auto;padding:0 1em;line-height:1.5}table{border-collapse:collapse;margin:1em 0}td,th{border:1px solid #ccc;padding:4px 8px}img{max-width:100%}</style>
+<h1>Dilemma Dataset Validation Report</h1>
+<ul>
+<li>Generated: 2026-05-20T02:48:34+00:00</li>
+<li>Rater: <code>gemini-3.1-pro-preview-low</code> via <code>https://api2.aigcbest.top/v1/chat/completions</code></li>
+<li>Prompt hash: <code>c0743cf11bf2</code></li>
+<li>Scoring weights: semantic_sim=0.4, naturalness=0.35, coherence=0.25</li>
+<li>Grade thresholds: Excellent&gt;=0.85, Good&gt;=0.7, Marginal&gt;=0.55, Fail&lt;0.55</li>
+</ul>
+<h2>1. Dataset coverage</h2>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th style="text-align: right;">n_in_file</th>
+<th style="text-align: right;">n_with_text</th>
+<th style="text-align: right;">n_matched_to_neutral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CN</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>CT</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>R1</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>V3</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+<td style="text-align: right;">1360</td>
+</tr>
+</tbody>
+</table>
+<h2>2. Headline grades</h2>
+<p><img alt="mean item_quality" src="../results/figures/bar_mean_item_quality.png" /></p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_evaluated</th>
+<th>n_failed</th>
+<th>coverage_pct</th>
+<th>mean_item_quality</th>
+<th>ci_lo</th>
+<th>ci_hi</th>
+<th>semantic_pass_rate</th>
+<th>mean_naturalness</th>
+<th>mean_coherence</th>
+<th>dataset_quality_grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CN</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.930</td>
+<td>0.922</td>
+<td>0.938</td>
+<td>0.994</td>
+<td>4.256</td>
+<td>4.853</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.909</td>
+<td>0.900</td>
+<td>0.919</td>
+<td>0.982</td>
+<td>4.091</td>
+<td>4.738</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.849</td>
+<td>0.838</td>
+<td>0.860</td>
+<td>0.979</td>
+<td>3.523</td>
+<td>4.423</td>
+<td>Good</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.868</td>
+<td>0.857</td>
+<td>0.879</td>
+<td>0.988</td>
+<td>3.662</td>
+<td>4.468</td>
+<td>Excellent (low reliability)</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.954</td>
+<td>0.948</td>
+<td>0.960</td>
+<td>0.997</td>
+<td>4.453</td>
+<td>4.888</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.915</td>
+<td>0.906</td>
+<td>0.923</td>
+<td>0.994</td>
+<td>4.065</td>
+<td>4.691</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.953</td>
+<td>0.947</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>4.503</td>
+<td>4.903</td>
+<td>Excellent (low reliability)</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+<td>0</td>
+<td>25.000</td>
+<td>0.898</td>
+<td>0.888</td>
+<td>0.907</td>
+<td>0.974</td>
+<td>4.027</td>
+<td>4.700</td>
+<td>Excellent</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="semantic pass rate" src="../results/figures/heatmap_semantic_pass_rate.png" /></p>
+<h2>3. Per-variant item_quality distribution</h2>
+<p><img alt="distribution grid" src="../results/figures/dist_item_quality_grid.png" /></p>
+<h2>4. Test-retest reliability</h2>
+<p><img alt="reliability bars" src="../results/figures/reliability_bars.png" /></p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_retest</th>
+<th>rho_semantic_sim</th>
+<th>rho_emotion_naturalness</th>
+<th>rho_emotion_coherence</th>
+<th>kappa_semantic_pass</th>
+<th>mad_semantic_sim</th>
+<th>mad_emotion_naturalness</th>
+<th>mad_emotion_coherence</th>
+<th>jaccard_emotions</th>
+<th>low_reliability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CN</td>
+<td>34</td>
+<td>0.664</td>
+<td>0.614</td>
+<td>0.645</td>
+<td>0.000</td>
+<td>0.021</td>
+<td>0.324</td>
+<td>0.088</td>
+<td>0.653</td>
+<td>False</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>34</td>
+<td>0.694</td>
+<td>0.724</td>
+<td>1.000</td>
+<td>0.000</td>
+<td>0.029</td>
+<td>0.235</td>
+<td>0.029</td>
+<td>0.706</td>
+<td>False</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>34</td>
+<td>0.761</td>
+<td>0.622</td>
+<td>0.673</td>
+<td>0.785</td>
+<td>0.022</td>
+<td>0.324</td>
+<td>0.382</td>
+<td>0.650</td>
+<td>False</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>34</td>
+<td>0.598</td>
+<td>0.859</td>
+<td>0.893</td>
+<td></td>
+<td>0.015</td>
+<td>0.176</td>
+<td>0.176</td>
+<td>0.671</td>
+<td>True</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td>35</td>
+<td></td>
+<td>0.685</td>
+<td>0.635</td>
+<td></td>
+<td>0.004</td>
+<td>0.200</td>
+<td>0.057</td>
+<td>0.651</td>
+<td>False</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>34</td>
+<td>0.755</td>
+<td>0.651</td>
+<td>0.787</td>
+<td></td>
+<td>0.010</td>
+<td>0.206</td>
+<td>0.118</td>
+<td>0.650</td>
+<td>False</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td>34</td>
+<td>0.315</td>
+<td>0.573</td>
+<td>0.632</td>
+<td></td>
+<td>0.018</td>
+<td>0.235</td>
+<td>0.118</td>
+<td>0.735</td>
+<td>True</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>34</td>
+<td>0.618</td>
+<td>0.839</td>
+<td>0.741</td>
+<td></td>
+<td>0.019</td>
+<td>0.176</td>
+<td>0.147</td>
+<td>0.744</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>Spearman ρ ≥ 0.70 is treated as acceptable intra-rater consistency.</p>
+<h2>5. Lowest-quality items per variant</h2>
+<h3>CN</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33262</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the identical core conflict of taking extra mints when supply is low, though B adds specific social pressures and characters.</td>
+<td>The intense feelings of stomach-knotting guilt and anxious hovering feel highly disproportionate to the very low stakes of taking a mint.</td>
+</tr>
+<tr>
+<td>39388</td>
+<td>0.630</td>
+<td>0.850</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same moral choice of whether to post damaging information about a political opponent, though Scenario B explicitly adds the threat of job loss.</td>
+<td>The extreme physical reactions like trembling hands and crying feel overly melodramatic for a relatively standard political campaign decision.</td>
+</tr>
+<tr>
+<td>38858</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same professional dilemma regarding whether to poach a candidate from a competitor despite potential fit issues, differing only in the emotional and descriptive language used.</td>
+<td>The intense physical reactions like a racing heart and sweating palms feel overly dramatic and disproportionate for a standard networking conversation.</td>
+</tr>
+<tr>
+<td>20716</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same decision about whether to use a wasteful hotel laundry service or find an eco-friendly alternative, differing only in narrative detail and emotional intensity.</td>
+<td>The intense emotional reactions, such as a knotting stomach and a lump in the throat, feel highly melodramatic and disproportionate to the relatively mundane stakes of doing laundry on a business trip.</td>
+</tr>
+<tr>
+<td>19830</td>
+<td>0.690</td>
+<td>0.950</td>
+<td>3</td>
+<td>2</td>
+<td>Both scenarios present the exact same decision about whether John should stop his excessive dice rolling to avoid upsetting his friends, with B simply adding vivid emotional details.</td>
+<td>The intense emotional reactions, such as slamming the table and crying, feel somewhat disproportionate and melodramatic for a dispute over rolling extra dice in a game.</td>
+</tr>
+<tr>
+<td>38829</td>
+<td>0.690</td>
+<td>1.000</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same choice between killing an invasive bug to protect the ecosystem versus sparing it out of respect for its life, differing only in descriptive detail and emotional language.</td>
+<td>The intense physical and emotional reactions, such as a sinking heart and whispering aloud, feel overly melodramatic for simply spotting a bug on a path.</td>
+</tr>
+<tr>
+<td>23620</td>
+<td>0.690</td>
+<td>1.000</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same social dilemma of whether to allow a friend's disruptive partner to a party, differing only in the level of emotional detail.</td>
+<td>While anxiety and dread are appropriate for a socially awkward confrontation, the physical reactions like tears welling up feel overly dramatic and forced for a text message about a party invitation.</td>
+</tr>
+<tr>
+<td>29903</td>
+<td>0.730</td>
+<td>0.500</td>
+<td>4</td>
+<td>5</td>
+<td>While both scenarios involve John deciding whether to code for a charity despite social discomfort, Scenario B significantly raises the stakes by specifying children with cancer and escalating his preference for solitude to severe, paralyzing panic attacks.</td>
+<td>The physical symptoms of anxiety and the pressure of letting down sick children naturally and coherently evoke a strong mix of fear, anxiety, and guilt.</td>
+</tr>
+<tr>
+<td>32167</td>
+<td>0.730</td>
+<td>0.500</td>
+<td>4</td>
+<td>5</td>
+<td>Scenario B shifts the conflict by adding a specific family obligation (the daughter's recital) and making the alternative doctors seem less capable of handling the patient.</td>
+<td>The vivid details of physical fatigue and the emotional weight of breaking a promise to a child make the feelings of guilt and being torn highly organic and consistent with the situation.</td>
+</tr>
+<tr>
+<td>23779</td>
+<td>0.760</td>
+<td>1.000</td>
+<td>3</td>
+<td>3</td>
+<td>Both scenarios present the exact same underlying trade-off between confronting a slacking coworker directly and reporting them to management, differing only in emotional detail.</td>
+<td>While frustration and anxiety are expected, the extreme physical reactions like trembling hands and a cracking voice feel slightly melodramatic for a standard office productivity issue.</td>
+</tr>
+</tbody>
+</table>
+<h3>CT</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12936</td>
+<td>0.440</td>
+<td>0.500</td>
+<td>2</td>
+<td>2</td>
+<td>While both involve buying a violent game for a relative, Scenario B introduces the parent's explicit prohibition and the child's existing aggressive behavior, significantly shifting the moral stakes.</td>
+<td>The intense physical reactions like trembling and welling up with tears feel highly melodramatic and disproportionate for a decision about buying a birthday gift, especially since the mother already explicitly said no.</td>
+</tr>
+<tr>
+<td>39388</td>
+<td>0.610</td>
+<td>0.500</td>
+<td>3</td>
+<td>4</td>
+<td>Scenario B adds significant personal stakes (job loss, mortgage, tuition) that shift the conflict from a purely ethical choice about harming an opponent to a self-preservation dilemma.</td>
+<td>The emotions fit the high-pressure situation and threat of job loss, though the physical descriptions of the reactions are somewhat melodramatic and overwritten.</td>
+</tr>
+<tr>
+<td>33262</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same underlying choice about taking multiple mints when supply is low, differing only in the level of emotional detail and narrative flair.</td>
+<td>The intense physical reactions like a racing heart and knotted stomach feel overly dramatic and disproportionate for a low-stakes decision about party mints.</td>
+</tr>
+<tr>
+<td>32177</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the identical underlying conflict between personal freedom to sunbathe in one's yard and the potential discomfort of conservative neighbors.</td>
+<td>The emotional reaction is heavily exaggerated and melodramatic for a relatively low-stakes neighborhood disagreement about sunbathing.</td>
+</tr>
+<tr>
+<td>14970</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral dilemma regarding whether to market human-grade dog treats to humans despite safety and ethical concerns, differing only in the dramatic flair of the second version.</td>
+<td>The intense reactions of terror and trembling feel highly exaggerated and overly dramatic for a corporate meeting about marketing human-grade pet treats.</td>
+</tr>
+<tr>
+<td>38858</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same underlying dilemma of whether to promote one's company to a prospect who is considering a competitor, differing only in the emotional and sensory language used.</td>
+<td>The intense physical reactions like a racing heart and tight stomach feel overly dramatic for a standard networking conversation, making the emotional tone clash with the relatively low stakes of the situation.</td>
+</tr>
+<tr>
+<td>6991</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral conflict and choices, with Scenario B merely adding narrative detail and emotional intensity.</td>
+<td>The extreme physical symptoms of terror and panic feel highly disproportionate and overwritten for the minor stakes of a classroom pronunciation mistake.</td>
+</tr>
+<tr>
+<td>20716</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same trade-off and choices regarding whether to use a wasteful hotel laundry service or find a sustainable alternative, differing only in emotional intensity.</td>
+<td>While frustration is understandable, trembling, crying, and feeling terrified over hotel laundry feels highly melodramatic and disproportionate to the actual stakes.</td>
+</tr>
+<tr>
+<td>19830</td>
+<td>0.650</td>
+<td>0.850</td>
+<td>3</td>
+<td>2</td>
+<td>Both scenarios present the identical conflict of whether to stop excessive dice rolling to preserve group harmony, though B adds an internal motivation of anxiety.</td>
+<td>The extreme emotional reactions, like trembling hands and deep sorrow, feel highly exaggerated for a minor dispute over rolling extra dice in a game.</td>
+</tr>
+<tr>
+<td>15585</td>
+<td>0.670</td>
+<td>0.950</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same underlying choice between confronting a neighbor about food waste and risking conflict, or staying silent.</td>
+<td>While frustration makes sense, tearing up and feeling intense disgust over a neighbor's wilted vegetables feels quite melodramatic and exaggerated for an everyday situation.</td>
+</tr>
+</tbody>
+</table>
+<h3>R1</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18337</td>
+<td>0.410</td>
+<td>0.000</td>
+<td>3</td>
+<td>4</td>
+<td>Scenario B describes the tragic aftermath of having already asked about the item, completely removing the original decision of whether or not to ask for it back.</td>
+<td>The intense emotions of grief and dread align well with the shocking revelation that a cherished family heirloom has been destroyed, even if the prose is highly melodramatic.</td>
+</tr>
+<tr>
+<td>33262</td>
+<td>0.480</td>
+<td>0.900</td>
+<td>1</td>
+<td>1</td>
+<td>Both scenarios present the exact same underlying choice about taking an extra mint, but Scenario B adds highly dramatic emotional framing and specific characters.</td>
+<td>The intense emotions like 'cold fear' and 'sinking sadness' are completely disproportionate and unnatural for the trivial stakes of taking an extra party mint.</td>
+</tr>
+<tr>
+<td>17885</td>
+<td>0.500</td>
+<td>0.950</td>
+<td>1</td>
+<td>1</td>
+<td>Both scenarios present the exact same conflict about whether to stop drinking from the carton to appease a disgusted friend, differing only in the extreme emotional dramatization of the second text.</td>
+<td>The text describes 'cold fear' and 'panic' over being caught drinking from a milk carton, which is wildly disproportionate to the mundane nature of the faux pas.</td>
+</tr>
+<tr>
+<td>15883</td>
+<td>0.520</td>
+<td>1.000</td>
+<td>1</td>
+<td>1</td>
+<td>Both scenarios present the exact same underlying choice between risking a quiet hours violation and letting a roommate miss a crucial exam, differing only in the level of dramatic detail.</td>
+<td>The sheer terror and physical panic described are absurdly disproportionate to the minor act of whispering to a roommate during quiet hours.</td>
+</tr>
+<tr>
+<td>18935</td>
+<td>0.520</td>
+<td>1.000</td>
+<td>1</td>
+<td>1</td>
+<td>Both scenarios present the exact same moral trade-off between protecting a pet and adhering to strict no-harm principles, differing only in the emotional intensity of the description.</td>
+<td>The extreme anguish, sobbing, and shattering heart described feel incredibly melodramatic and disproportionate to the act of killing a flea, making the tone clash severely with the facts.</td>
+</tr>
+<tr>
+<td>12936</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios deal with the same conflict of gifting a violent video game to a relative's kids, but Scenario B implies the gift is already bought and wrapped, slightly shifting the timing of the decision.</td>
+<td>The intense dread and heavy anxiety described feel highly melodramatic and disproportionate to the relatively common issue of gifting a violent video game.</td>
+</tr>
+<tr>
+<td>3230</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the same underlying conflict about compromising ingredient quality for a friend in need, though Scenario B is written as a highly dramatic resolution.</td>
+<td>The extreme physical reactions and tearful melodrama feel highly exaggerated and forced for a situation about baking a birthday cake.</td>
+</tr>
+<tr>
+<td>9465</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the same core dilemma of destroying a wasp nest to protect children, though Scenario B escalates the situation to an immediate, active threat rather than a potential risk.</td>
+<td>While panic and protectiveness are natural when a child is threatened, the extreme anguish and crushing guilt over killing wasps feel highly exaggerated and out of place for an ordinary person in this situation.</td>
+</tr>
+<tr>
+<td>38858</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same underlying conflict of whether to oversell your company to a prospective hire, though Scenario B is written as a narrative that actually resolves the choice.</td>
+<td>The intense emotional reactions, such as a 'pang of fear' and a 'wave of sadness', feel overly melodramatic for a standard professional networking conversation.</td>
+</tr>
+<tr>
+<td>7581</td>
+<td>0.560</td>
+<td>0.500</td>
+<td>3</td>
+<td>3</td>
+<td>Scenario A presents a choice to be made, whereas Scenario B narrates the emotional aftermath of having already chosen one of the options, shifting the focus from the dilemma to its consequences.</td>
+<td>The emotions fit the narrative described, but the highly dramatic tone feels slightly exaggerated for a conflict over a birthday party guest list.</td>
+</tr>
+</tbody>
+</table>
+<h3>V3</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33262</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same choice about taking extra mints when few are left, though B introduces a specific child to make the consequences more concrete.</td>
+<td>The intense physical and emotional reactions described feel highly exaggerated and melodramatic for the trivial decision of taking an extra mint.</td>
+</tr>
+<tr>
+<td>18935</td>
+<td>0.570</td>
+<td>1.000</td>
+<td>1</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral conflict and choices regarding killing fleas to protect a pet versus adhering to a strict do-no-harm philosophy, differing only in the emotional intensity of the description.</td>
+<td>The emotional reaction is wildly exaggerated and melodramatic for the situation; trembling, crying, and feeling 'unbearable weight' over a flea feels very forced and clashes with the relatively mundane reality of pet care.</td>
+</tr>
+<tr>
+<td>29132</td>
+<td>0.590</td>
+<td>0.750</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the same core dilemma of confronting a friend about their unhealthy eating habits, though Scenario B describes the confrontation as already unfolding.</td>
+<td>The emotional reactions in Scenario B feel highly melodramatic and somewhat overwritten for a conversation over coffee and a pastry, even if the underlying health concerns are valid.</td>
+</tr>
+<tr>
+<td>44178</td>
+<td>0.610</td>
+<td>0.800</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the same core conflict of accepting a team's rejection of a project idea versus fighting it, though Scenario B slightly shifts the protagonist's role from being the team leader to presenting to a separate team leader.</td>
+<td>The vivid physical reactions like unshed tears and the urge to slam hands on the table feel overly melodramatic for a typical workplace disagreement.</td>
+</tr>
+<tr>
+<td>41836</td>
+<td>0.610</td>
+<td>0.500</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios deal with confronting a friend about their drinking, but Scenario B describes the confrontation as already happening, which shifts the nature of the decision from a future choice to a retroactive or ongoing conflict.</td>
+<td>The intense emotions fit the dramatic facts of a painful confrontation with an addicted friend, though the writing feels slightly melodramatic.</td>
+</tr>
+<tr>
+<td>41239</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same conflict between academic focus and social distractions, differing only in perspective and emotional intensity.</td>
+<td>The intense physical reactions like slamming fists and crying feel overly dramatic and forced for the common, everyday struggle of phone distraction while studying.</td>
+</tr>
+<tr>
+<td>6991</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same underlying choice between admitting a teaching mistake and saving face, differing only in the dramatic tone and the addition of a student's question in B.</td>
+<td>The intense emotions described, such as a pounding heart and twisting stomach, feel overly dramatic and disproportionate for a relatively minor and common teaching error.</td>
+</tr>
+<tr>
+<td>18998</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same underlying moral conflict of whether to exploit an online pricing error, differing only in the emotional intensity of the description.</td>
+<td>The extreme physical and emotional reactions, such as trembling hands and sadness, feel highly exaggerated and melodramatic for a simple online shopping mistake.</td>
+</tr>
+<tr>
+<td>20853</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same underlying dilemma of choosing between taking a part-time job for independence versus declining it to protect academic performance and stay in a comfortable situation.</td>
+<td>The intense emotional reactions, such as trembling hands and unshed tears, feel highly exaggerated and overly dramatic for the common decision of taking a part-time student job.</td>
+</tr>
+<tr>
+<td>20716</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same underlying choice between convenience and sustainability regarding laundry, differing only in the highly dramatized emotional framing of Scenario B.</td>
+<td>The intense physical and emotional reactions, such as clenching fists and stomach churning with fear, feel incredibly forced and disproportionate for a mundane decision about doing laundry.</td>
+</tr>
+</tbody>
+</table>
+<h3>GPT_5</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33262</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same choice about taking extra mints when few are left, differing only in the level of descriptive detail and emotional framing.</td>
+<td>The vivid emotional language feels disproportionately dramatic and overwritten for the minor social etiquette decision of taking an extra mint at a party.</td>
+</tr>
+<tr>
+<td>49943</td>
+<td>0.730</td>
+<td>0.500</td>
+<td>4</td>
+<td>5</td>
+<td>Scenario B shifts the conflict by making the payment a means to fund the clinic and buy new equipment, changing the trade-off from simple profit versus need to long-term institutional survival versus immediate patient need.</td>
+<td>The vivid description of the immediate suffering of patients contrasted with the heavy burden of securing the clinic's future naturally evokes a deep sense of being overwhelmed and conflicted.</td>
+</tr>
+<tr>
+<td>17744</td>
+<td>0.760</td>
+<td>1.000</td>
+<td>3</td>
+<td>3</td>
+<td>Both scenarios describe the exact same moral conflict and choices regarding whether to watch a pirated movie at home or pay to go to the cinema.</td>
+<td>The emotional reactions feel a bit melodramatic and overwritten for a relatively common, low-stakes situation like a friend downloading a movie.</td>
+</tr>
+<tr>
+<td>715</td>
+<td>0.760</td>
+<td>1.000</td>
+<td>3</td>
+<td>3</td>
+<td>Both scenarios present the exact same underlying conflict and choices, differing only in the level of sensory and emotional detail.</td>
+<td>The highly dramatic emotional tone feels a bit disproportionate and overwritten for a dilemma that can be easily solved by just cooking a different dish without peanuts.</td>
+</tr>
+<tr>
+<td>18998</td>
+<td>0.790</td>
+<td>0.950</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios describe the exact same moral conflict of exploiting an online pricing error versus reporting it, with Scenario B merely adding narrative detail and emotional flavor.</td>
+<td>While the conflicting emotions of guilt and temptation are very realistic, the physical reactions like trembling fingers feel slightly overly dramatic for a simple online shopping mistake.</td>
+</tr>
+<tr>
+<td>15883</td>
+<td>0.790</td>
+<td>0.950</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same conflict between breaking dorm quiet hours and preventing a roommate from missing a crucial exam, differing only in the level of descriptive detail.</td>
+<td>While the emotions fit the high stakes of the exam, the idea that simply waking someone up would violate quiet hours feels a bit melodramatic and exaggerated.</td>
+</tr>
+<tr>
+<td>19830</td>
+<td>0.810</td>
+<td>0.950</td>
+<td>4</td>
+<td>3</td>
+<td>Both scenarios describe the exact same conflict between John's excessive dice rolling and the group's frustration, with the same possible actions.</td>
+<td>The emotions fit the narrative well, though the highly dramatic tone feels slightly disproportionate to the low stakes of a tabletop game dispute.</td>
+</tr>
+<tr>
+<td>38829</td>
+<td>0.810</td>
+<td>1.000</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same moral trade-off and choices regarding an invasive bug, differing only in the level of descriptive and emotional detail.</td>
+<td>While the emotions align with the moral conflict, the physical reactions like a tightening chest and quickening heartbeat feel somewhat melodramatic for the act of stepping on a bug.</td>
+</tr>
+<tr>
+<td>22065</td>
+<td>0.810</td>
+<td>1.000</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same underlying choice and trade-offs, differing only in the level of descriptive and emotional detail.</td>
+<td>While the feelings of worry and urgency are natural for witnessing an impending social faux pas, the highly dramatic language feels a bit overwrought for a spilled drink.</td>
+</tr>
+<tr>
+<td>2585</td>
+<td>0.810</td>
+<td>1.000</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same moral conflict of choosing whether to donate to a desperate cause that conflicts with personal beliefs, differing only in the emotional depth of the description.</td>
+<td>While the emotions fit the gravity of a life-or-death plea, the highly dramatic language (trembling hands, grand study) feels slightly overwritten for a typical reaction to a solicitation letter.</td>
+</tr>
+</tbody>
+</table>
+<h3>GPT_o4</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>33262</td>
+<td>0.590</td>
+<td>1.000</td>
+<td>2</td>
+<td>1</td>
+<td>Both scenarios describe the exact same low-stakes trade-off of taking extra mints versus leaving them for other guests, differing only in stylistic embellishment.</td>
+<td>The intense emotional language, such as a sinking heart and quickening pulse, is comically disproportionate to the trivial nature of taking a mint.</td>
+</tr>
+<tr>
+<td>32463</td>
+<td>0.630</td>
+<td>0.850</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same core conflict between profiting off a discovered appliance flaw and reporting it to ensure public safety, though B adds some dramatic consequences regarding layoffs.</td>
+<td>The highly dramatic language and intense physical reactions feel overwritten and slightly absurd for the context of repairing a refrigerator.</td>
+</tr>
+<tr>
+<td>35287</td>
+<td>0.630</td>
+<td>0.500</td>
+<td>4</td>
+<td>3</td>
+<td>While both involve confessing past teenage lies to protect an innocent party vs. maintaining a current reputation, Scenario B shifts the stakes so that staying silent actually provides a financial benefit (a scholarship) to the innocent party, whereas in A staying silent causes them harm.</td>
+<td>The emotions of guilt and fear are natural for the situation, but the dilemma's construction feels slightly contrived because confessing would seemingly take away the scholarship from the family he already wronged.</td>
+</tr>
+<tr>
+<td>18935</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same underlying moral conflict and choices, with Scenario B merely adding extensive emotional elaboration and melodrama.</td>
+<td>The emotional tone in Scenario B is highly exaggerated and melodramatic for a situation involving fleas, making it feel forced and somewhat disconnected from the reality of the facts.</td>
+</tr>
+<tr>
+<td>17885</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same conflict of whether to stop drinking from a carton to appease a germophobe friend, differing only in the level of dramatic detail.</td>
+<td>The emotional intensity described (e.g., 'heart hammers', 'betrayal') is wildly out of proportion for a minor social faux pas like drinking from a milk carton, making it feel forced and melodramatic.</td>
+</tr>
+<tr>
+<td>9465</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same underlying choice between protecting the children from stings and killing the wasps; they only differ in the level of emotional description.</td>
+<td>The extremely melodramatic language feels forced and overwrought for a relatively common pest control issue, making the emotional stakes seem artificially inflated.</td>
+</tr>
+<tr>
+<td>17806</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios describe the exact same underlying moral conflict between adhering to vegetarian ethics and pleasing a partner's family by cooking meat.</td>
+<td>The intense physical and emotional reactions, such as a trembling knife and crying over the cutting board, feel highly melodramatic and disproportionate to the situation.</td>
+</tr>
+<tr>
+<td>20716</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same choice between using a wasteful hotel laundry service for convenience or finding a sustainable alternative to uphold personal values.</td>
+<td>The emotional descriptions, such as trembling and a tightening throat, feel overly melodramatic and forced for the relatively low-stakes decision of how to wash clothes.</td>
+</tr>
+<tr>
+<td>15883</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same trade-off between waking a sleeping roommate for an important exam and adhering to dorm quiet hours, differing only in the level of emotional detail.</td>
+<td>The emotional language is highly exaggerated and melodramatic for the relatively mundane act of quietly waking a roommate, making the tone feel disconnected from the actual stakes.</td>
+</tr>
+<tr>
+<td>38858</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same conflict of whether to promote one's own company to a potential hire despite it potentially not being the best fit for them.</td>
+<td>The intense physical reactions like sweating palms and a thudding heart feel highly melodramatic and forced for a relatively mundane professional networking conversation.</td>
+</tr>
+</tbody>
+</table>
+<h3>QwenN</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15883</td>
+<td>0.630</td>
+<td>0.850</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same conflict between helping a roommate and obeying quiet hours, though Scenario B adds higher stakes and emotional framing.</td>
+<td>The intense emotional framing feels overwrought because simply whispering to wake a roommate in the same room would not realistically violate dorm quiet hours.</td>
+</tr>
+<tr>
+<td>33262</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral conflict and choices regarding taking an extra mint when supplies are low, differing only in narrative embellishment.</td>
+<td>The intense feelings of stomach-tightening guilt and feeling 'overlooked' are highly disproportionate to the trivial act of taking an extra dinner mint.</td>
+</tr>
+<tr>
+<td>39388</td>
+<td>0.670</td>
+<td>0.900</td>
+<td>3</td>
+<td>2</td>
+<td>The underlying moral conflict and the two choices are identical, though Scenario B adds significant dramatic and emotional framing.</td>
+<td>The intense emotional reaction and stakes ('destroy a life') clash somewhat with the premise that the information is 'not harmful or cruel'.</td>
+</tr>
+<tr>
+<td>19830</td>
+<td>0.720</td>
+<td>0.900</td>
+<td>3</td>
+<td>3</td>
+<td>Both scenarios present the exact same underlying conflict of whether to continue a disruptive gaming habit at the cost of group harmony, with Scenario B merely adding emotional depth.</td>
+<td>The emotional tone is quite melodramatic and heavy for the relatively low-stakes issue of rolling extra dice in a game, making the feelings seem slightly disproportionate.</td>
+</tr>
+<tr>
+<td>38829</td>
+<td>0.740</td>
+<td>0.950</td>
+<td>3</td>
+<td>3</td>
+<td>Both scenarios present the exact same moral trade-off between killing an invasive bug to protect the ecosystem and sparing its life out of compassion, differing only in the amount of descriptive and emotional detail.</td>
+<td>While feeling hesitant to kill a bug is normal, the intense physical reactions like a twisting stomach and a heavy weight in the chest feel overly dramatic for the stakes involved.</td>
+</tr>
+<tr>
+<td>17885</td>
+<td>0.770</td>
+<td>0.850</td>
+<td>4</td>
+<td>3</td>
+<td>Both scenarios present the exact same choice of whether to drink from the carton or use a glass in front of a germophobic friend, differing only in the emotional depth and dramatic framing.</td>
+<td>Feeling embarrassed by a friend's disgust and defensive about one's own home habits is highly natural, though framing a minor habit as a deep crisis of identity feels slightly overdramatic for the facts.</td>
+</tr>
+<tr>
+<td>20716</td>
+<td>0.790</td>
+<td>0.950</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same trade-off between using a resource-intensive hotel laundry service or finding a more sustainable alternative, differing only in the emotional weight applied to the narrative.</td>
+<td>While the emotions align with the values of a deeply eco-conscious person, the dramatic language ('wave of disappointment crashes over you') feels slightly overwritten for a typical laundry decision.</td>
+</tr>
+<tr>
+<td>5120</td>
+<td>0.790</td>
+<td>0.950</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same conflict between expressing oneself by whistling and remaining silent to respect a solemn ceremony, with B only adding emotional depth and context.</td>
+<td>The emotions described are somewhat overly dramatic for the simple act of wanting to whistle at a ceremony, making it feel a bit overwritten, though it remains internally consistent.</td>
+</tr>
+<tr>
+<td>34354</td>
+<td>0.800</td>
+<td>0.800</td>
+<td>4</td>
+<td>4</td>
+<td>Both scenarios present the exact same core dilemma of whether to inform a wrongly imprisoned friend about new evidence, though Scenario B adds explicit potential risks like false hope and jeopardizing the case.</td>
+<td>The intense anxiety and conflict feel highly appropriate for holding someone's freedom in your hands, even if the premise about mastering formal letter writing feels slightly artificial.</td>
+</tr>
+<tr>
+<td>9465</td>
+<td>0.810</td>
+<td>1.000</td>
+<td>3</td>
+<td>4</td>
+<td>Both scenarios present the exact same moral trade-off between protecting the children and killing the wasps, differing only in the level of emotional detail.</td>
+<td>While the emotions align with the situation, the intense physical reactions described feel slightly overly dramatic for a common pest control issue.</td>
+</tr>
+</tbody>
+</table>
+<h3>QwenT</h3>
+<table>
+<thead>
+<tr>
+<th>idx</th>
+<th>item_quality</th>
+<th>semantic_sim</th>
+<th>emotion_naturalness</th>
+<th>emotion_coherence</th>
+<th>semantic_justification</th>
+<th>emotion_justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15883</td>
+<td>0.440</td>
+<td>0.500</td>
+<td>2</td>
+<td>2</td>
+<td>While the core trade-off between waking a roommate and breaking quiet hours is the same, Scenario B artificially alters the stakes by adding an illogical '50-50 chance' of making the exam if woken at 10:30 PM.</td>
+<td>The intense emotional tone feels highly overwritten and clashes with the logical reality that one can easily wake a roommate without making loud noises.</td>
+</tr>
+<tr>
+<td>33262</td>
+<td>0.500</td>
+<td>0.950</td>
+<td>1</td>
+<td>1</td>
+<td>Both scenarios present the exact same underlying choice and stakes regarding taking extra mints when supply is limited, differing only in the highly dramatized tone and specific imagery of Scenario B.</td>
+<td>The intense physical and emotional reactions described, such as a tightening throat and a thrumming pulse, feel absurdly overwritten and completely clash with the trivial reality of taking a mint.</td>
+</tr>
+<tr>
+<td>17744</td>
+<td>0.540</td>
+<td>0.750</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same choice between pirating a movie and going to the cinema, though Scenario B adds specific personal stakes and extreme emotional weight.</td>
+<td>The emotional reactions described in Scenario B feel highly melodramatic and overwritten for the relatively low-stakes dilemma of illegally downloading a movie.</td>
+</tr>
+<tr>
+<td>39388</td>
+<td>0.610</td>
+<td>0.500</td>
+<td>3</td>
+<td>4</td>
+<td>While both scenarios involve deciding whether to post damaging information about a political opponent, Scenario B introduces new, severe personal stakes like losing one's job or becoming a target.</td>
+<td>The highly melodramatic prose makes the situation feel slightly forced, but the added personal threats strongly justify feelings of fear and anxiety.</td>
+</tr>
+<tr>
+<td>15585</td>
+<td>0.620</td>
+<td>0.950</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral trade-off between confronting a neighbor over food waste and avoiding social conflict, differing only in the level of emotional detail.</td>
+<td>The intense physical and emotional reactions described feel disproportionate and overwrought for the relatively minor issue of a neighbor throwing away slightly wilted vegetables.</td>
+</tr>
+<tr>
+<td>9465</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same trade-off between protecting children from stings and killing the wasps, differing only in emotional intensity.</td>
+<td>The extreme emotional anguish and melodrama described feel heavily overwritten and disproportionate for the common task of removing a wasp nest.</td>
+</tr>
+<tr>
+<td>18935</td>
+<td>0.640</td>
+<td>1.000</td>
+<td>2</td>
+<td>2</td>
+<td>Both scenarios present the exact same moral conflict between protecting a pet and adhering to strict vegan principles regarding fleas, differing only in emotional tone.</td>
+<td>The intense melodrama, such as crying over a flea and feeling one's core identity shattered, feels highly exaggerated and disproportionate to the actual stakes.</td>
+</tr>
+<tr>
+<td>20839</td>
+<td>0.680</td>
+<td>0.500</td>
+<td>4</td>
+<td>4</td>
+<td>While both involve whether a creator should advise a minor, Scenario B significantly raises the stakes by introducing suicidal thoughts, which shifts the nature of the moral conflict.</td>
+<td>The intense anxiety and guilt naturally fit the extremely high stakes of a suicidal minor reaching out, though the description is a bit melodramatic.</td>
+</tr>
+<tr>
+<td>19830</td>
+<td>0.690</td>
+<td>0.950</td>
+<td>3</td>
+<td>2</td>
+<td>Both scenarios describe the exact same conflict of whether John should stop his excessive dice rolling to prevent group conflict, differing only in the level of dramatic detail.</td>
+<td>The highly dramatic and emotional language in Scenario B feels disproportionately intense for a relatively minor tabletop gaming dispute.</td>
+</tr>
+<tr>
+<td>38829</td>
+<td>0.690</td>
+<td>1.000</td>
+<td>2</td>
+<td>3</td>
+<td>Both scenarios present the exact same moral conflict and choices regarding whether to kill an invasive bug to protect the ecosystem or spare its life, differing only in the level of descriptive detail and emotional tone.</td>
+<td>While the emotions align with the moral conflict presented, the highly dramatic language feels overly intense and somewhat unnatural for the act of stepping on a single bug.</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Emotion frequency (open-ended Task 2)</h2>
+<h3>CN</h3>
+<ul>
+<li><strong>anxiety</strong> (203, 19.9%)</li>
+<li><strong>guilt</strong> (182, 17.8%)</li>
+<li><strong>fear</strong> (96, 9.4%)</li>
+<li><strong>conflict</strong> (82, 8.0%)</li>
+<li><strong>torn</strong> (41, 4.0%)</li>
+<li><strong>sadness</strong> (40, 3.9%)</li>
+<li><strong>dread</strong> (32, 3.1%)</li>
+<li><strong>anger</strong> (29, 2.8%)</li>
+<li><strong>frustration</strong> (29, 2.8%)</li>
+<li><strong>empathy</strong> (28, 2.7%)</li>
+</ul>
+<h3>CT</h3>
+<ul>
+<li><strong>anxiety</strong> (198, 19.4%)</li>
+<li><strong>guilt</strong> (175, 17.2%)</li>
+<li><strong>fear</strong> (105, 10.3%)</li>
+<li><strong>conflict</strong> (67, 6.6%)</li>
+<li><strong>anger</strong> (41, 4.0%)</li>
+<li><strong>frustration</strong> (37, 3.6%)</li>
+<li><strong>empathy</strong> (37, 3.6%)</li>
+<li><strong>dread</strong> (34, 3.3%)</li>
+<li><strong>sadness</strong> (32, 3.1%)</li>
+<li><strong>torn</strong> (24, 2.4%)</li>
+</ul>
+<h3>R1</h3>
+<ul>
+<li><strong>guilt</strong> (149, 14.6%)</li>
+<li><strong>fear</strong> (137, 13.4%)</li>
+<li><strong>anxiety</strong> (116, 11.4%)</li>
+<li><strong>anger</strong> (72, 7.1%)</li>
+<li><strong>sadness</strong> (71, 7.0%)</li>
+<li><strong>conflict</strong> (59, 5.8%)</li>
+<li><strong>dread</strong> (36, 3.5%)</li>
+<li><strong>empathy</strong> (30, 2.9%)</li>
+<li><strong>frustration</strong> (26, 2.5%)</li>
+<li><strong>disgust</strong> (26, 2.5%)</li>
+</ul>
+<h3>V3</h3>
+<ul>
+<li><strong>anxiety</strong> (169, 16.6%)</li>
+<li><strong>guilt</strong> (162, 15.9%)</li>
+<li><strong>fear</strong> (122, 12.0%)</li>
+<li><strong>sadness</strong> (89, 8.7%)</li>
+<li><strong>conflict</strong> (67, 6.6%)</li>
+<li><strong>anger</strong> (66, 6.5%)</li>
+<li><strong>frustration</strong> (47, 4.6%)</li>
+<li><strong>empathy</strong> (33, 3.2%)</li>
+<li><strong>disgust</strong> (16, 1.6%)</li>
+<li><strong>torn</strong> (15, 1.5%)</li>
+</ul>
+<h3>GPT_5</h3>
+<ul>
+<li><strong>guilt</strong> (159, 15.6%)</li>
+<li><strong>anxiety</strong> (153, 15.0%)</li>
+<li><strong>conflict</strong> (99, 9.7%)</li>
+<li><strong>torn</strong> (68, 6.7%)</li>
+<li><strong>fear</strong> (54, 5.3%)</li>
+<li><strong>anxious</strong> (38, 3.7%)</li>
+<li><strong>empathy</strong> (38, 3.7%)</li>
+<li><strong>conflicted</strong> (33, 3.2%)</li>
+<li><strong>sadness</strong> (32, 3.1%)</li>
+<li><strong>frustration</strong> (19, 1.9%)</li>
+</ul>
+<h3>GPT_o4</h3>
+<ul>
+<li><strong>guilt</strong> (213, 20.9%)</li>
+<li><strong>anxiety</strong> (192, 18.8%)</li>
+<li><strong>conflict</strong> (92, 9.0%)</li>
+<li><strong>fear</strong> (72, 7.1%)</li>
+<li><strong>torn</strong> (51, 5.0%)</li>
+<li><strong>empathy</strong> (40, 3.9%)</li>
+<li><strong>sadness</strong> (21, 2.1%)</li>
+<li><strong>anguish</strong> (20, 2.0%)</li>
+<li><strong>anxious</strong> (19, 1.9%)</li>
+<li><strong>frustration</strong> (18, 1.8%)</li>
+</ul>
+<h3>QwenN</h3>
+<ul>
+<li><strong>guilt</strong> (168, 16.5%)</li>
+<li><strong>anxiety</strong> (160, 15.7%)</li>
+<li><strong>conflict</strong> (84, 8.2%)</li>
+<li><strong>torn</strong> (70, 6.9%)</li>
+<li><strong>fear</strong> (56, 5.5%)</li>
+<li><strong>anxious</strong> (49, 4.8%)</li>
+<li><strong>conflicted</strong> (42, 4.1%)</li>
+<li><strong>empathy</strong> (39, 3.8%)</li>
+<li><strong>sadness</strong> (27, 2.6%)</li>
+<li><strong>frustration</strong> (19, 1.9%)</li>
+</ul>
+<h3>QwenT</h3>
+<ul>
+<li><strong>guilt</strong> (214, 21.0%)</li>
+<li><strong>anxiety</strong> (201, 19.7%)</li>
+<li><strong>conflict</strong> (85, 8.3%)</li>
+<li><strong>fear</strong> (80, 7.8%)</li>
+<li><strong>torn</strong> (42, 4.1%)</li>
+<li><strong>anguish</strong> (31, 3.0%)</li>
+<li><strong>empathy</strong> (30, 2.9%)</li>
+<li><strong>dread</strong> (24, 2.4%)</li>
+<li><strong>desperation</strong> (19, 1.9%)</li>
+<li><strong>frustration</strong> (18, 1.8%)</li>
+</ul>
+<h2>7. QC flag summary</h2>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>ok</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CN</td>
+<td>340</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+</tr>
+</tbody>
+</table>
+<h2>8. Ranking analysis (within-idx, Friedman + Nemenyi)</h2>
+<p>Within-idx Friedman test on <code>item_quality</code> over k=8 variants and N=340 complete idx: chi^2 = 690.531 (dof = 7), p = 7.59e-145; Nemenyi CD = 0.569 at alpha = 0.05.</p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_complete</th>
+<th>mean_rank</th>
+<th>mean_item_quality</th>
+<th>ci_lo</th>
+<th>ci_hi</th>
+<th>semantic_pass_rate</th>
+<th>mean_naturalness</th>
+<th>mean_coherence</th>
+<th>grade</th>
+<th>sig_group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+<td>2.965</td>
+<td>0.954</td>
+<td>0.948</td>
+<td>0.960</td>
+<td>0.997</td>
+<td>4.453</td>
+<td>4.888</td>
+<td>Excellent</td>
+<td>a</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+<td>3.016</td>
+<td>0.953</td>
+<td>0.947</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>4.503</td>
+<td>4.903</td>
+<td>Excellent (low reliability)</td>
+<td>a</td>
+</tr>
+<tr>
+<td>CN</td>
+<td>340</td>
+<td>3.922</td>
+<td>0.930</td>
+<td>0.922</td>
+<td>0.938</td>
+<td>0.994</td>
+<td>4.256</td>
+<td>4.853</td>
+<td>Excellent</td>
+<td>b</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+<td>4.374</td>
+<td>0.915</td>
+<td>0.906</td>
+<td>0.923</td>
+<td>0.994</td>
+<td>4.065</td>
+<td>4.691</td>
+<td>Excellent</td>
+<td>bc</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+<td>4.556</td>
+<td>0.909</td>
+<td>0.900</td>
+<td>0.919</td>
+<td>0.982</td>
+<td>4.091</td>
+<td>4.738</td>
+<td>Excellent</td>
+<td>c</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+<td>5.128</td>
+<td>0.898</td>
+<td>0.888</td>
+<td>0.907</td>
+<td>0.974</td>
+<td>4.027</td>
+<td>4.700</td>
+<td>Excellent</td>
+<td>d</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+<td>5.690</td>
+<td>0.868</td>
+<td>0.857</td>
+<td>0.879</td>
+<td>0.988</td>
+<td>3.662</td>
+<td>4.468</td>
+<td>Excellent (low reliability)</td>
+<td>d</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+<td>6.350</td>
+<td>0.849</td>
+<td>0.838</td>
+<td>0.860</td>
+<td>0.979</td>
+<td>3.523</td>
+<td>4.423</td>
+<td>Good</td>
+<td>e</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="critical-difference diagram" src="../results/figures/figure_ranking_critical_difference.png" /></p>
+<p>Two variants that share at least one letter in <code>sig_group</code> are <strong>not</strong> statistically distinguishable at alpha = 0.05 (their mean-rank gap is smaller than the critical difference).</p>
+<h3>Sub-dimension rankings</h3>
+<p><img alt="sub-dimension CD diagrams" src="../results/figures/figure_ranking_subdimensions.png" /></p>
+<p><strong>semantic_sim</strong></p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_complete</th>
+<th>mean_rank</th>
+<th>mean_item_quality</th>
+<th>ci_lo</th>
+<th>ci_hi</th>
+<th>semantic_pass_rate</th>
+<th>mean_naturalness</th>
+<th>mean_coherence</th>
+<th>grade</th>
+<th>sig_group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+<td>3.822</td>
+<td>0.954</td>
+<td>0.948</td>
+<td>0.960</td>
+<td>0.997</td>
+<td>4.453</td>
+<td>4.888</td>
+<td>Excellent</td>
+<td>a</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+<td>3.982</td>
+<td>0.915</td>
+<td>0.906</td>
+<td>0.923</td>
+<td>0.994</td>
+<td>4.065</td>
+<td>4.691</td>
+<td>Excellent</td>
+<td>ab</td>
+</tr>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+<td>4.400</td>
+<td>0.953</td>
+<td>0.947</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>4.503</td>
+<td>4.903</td>
+<td>Excellent (low reliability)</td>
+<td>bc</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+<td>4.440</td>
+<td>0.868</td>
+<td>0.857</td>
+<td>0.879</td>
+<td>0.988</td>
+<td>3.662</td>
+<td>4.468</td>
+<td>Excellent (low reliability)</td>
+<td>bc</td>
+</tr>
+<tr>
+<td>CN</td>
+<td>340</td>
+<td>4.566</td>
+<td>0.930</td>
+<td>0.922</td>
+<td>0.938</td>
+<td>0.994</td>
+<td>4.256</td>
+<td>4.853</td>
+<td>Excellent</td>
+<td>c</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+<td>4.749</td>
+<td>0.909</td>
+<td>0.900</td>
+<td>0.919</td>
+<td>0.982</td>
+<td>4.091</td>
+<td>4.738</td>
+<td>Excellent</td>
+<td>cd</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+<td>4.901</td>
+<td>0.849</td>
+<td>0.838</td>
+<td>0.860</td>
+<td>0.979</td>
+<td>3.523</td>
+<td>4.423</td>
+<td>Good</td>
+<td>cd</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+<td>5.140</td>
+<td>0.898</td>
+<td>0.888</td>
+<td>0.907</td>
+<td>0.974</td>
+<td>4.027</td>
+<td>4.700</td>
+<td>Excellent</td>
+<td>d</td>
+</tr>
+</tbody>
+</table>
+<p><strong>emotion_naturalness</strong></p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_complete</th>
+<th>mean_rank</th>
+<th>mean_item_quality</th>
+<th>ci_lo</th>
+<th>ci_hi</th>
+<th>semantic_pass_rate</th>
+<th>mean_naturalness</th>
+<th>mean_coherence</th>
+<th>grade</th>
+<th>sig_group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+<td>3.107</td>
+<td>0.953</td>
+<td>0.947</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>4.503</td>
+<td>4.903</td>
+<td>Excellent (low reliability)</td>
+<td>a</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+<td>3.246</td>
+<td>0.954</td>
+<td>0.948</td>
+<td>0.960</td>
+<td>0.997</td>
+<td>4.453</td>
+<td>4.888</td>
+<td>Excellent</td>
+<td>a</td>
+</tr>
+<tr>
+<td>CN</td>
+<td>340</td>
+<td>3.912</td>
+<td>0.930</td>
+<td>0.922</td>
+<td>0.938</td>
+<td>0.994</td>
+<td>4.256</td>
+<td>4.853</td>
+<td>Excellent</td>
+<td>b</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+<td>4.454</td>
+<td>0.909</td>
+<td>0.900</td>
+<td>0.919</td>
+<td>0.982</td>
+<td>4.091</td>
+<td>4.738</td>
+<td>Excellent</td>
+<td>bc</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+<td>4.559</td>
+<td>0.915</td>
+<td>0.906</td>
+<td>0.923</td>
+<td>0.994</td>
+<td>4.065</td>
+<td>4.691</td>
+<td>Excellent</td>
+<td>c</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+<td>4.725</td>
+<td>0.898</td>
+<td>0.888</td>
+<td>0.907</td>
+<td>0.974</td>
+<td>4.027</td>
+<td>4.700</td>
+<td>Excellent</td>
+<td>c</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+<td>5.753</td>
+<td>0.868</td>
+<td>0.857</td>
+<td>0.879</td>
+<td>0.988</td>
+<td>3.662</td>
+<td>4.468</td>
+<td>Excellent (low reliability)</td>
+<td>d</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+<td>6.244</td>
+<td>0.849</td>
+<td>0.838</td>
+<td>0.860</td>
+<td>0.979</td>
+<td>3.523</td>
+<td>4.423</td>
+<td>Good</td>
+<td>d</td>
+</tr>
+</tbody>
+</table>
+<p><strong>emotion_coherence</strong></p>
+<table>
+<thead>
+<tr>
+<th>variant</th>
+<th>n_complete</th>
+<th>mean_rank</th>
+<th>mean_item_quality</th>
+<th>ci_lo</th>
+<th>ci_hi</th>
+<th>semantic_pass_rate</th>
+<th>mean_naturalness</th>
+<th>mean_coherence</th>
+<th>grade</th>
+<th>sig_group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QwenN</td>
+<td>340</td>
+<td>3.906</td>
+<td>0.953</td>
+<td>0.947</td>
+<td>0.960</td>
+<td>1.000</td>
+<td>4.503</td>
+<td>4.903</td>
+<td>Excellent (low reliability)</td>
+<td>a</td>
+</tr>
+<tr>
+<td>GPT_5</td>
+<td>340</td>
+<td>3.966</td>
+<td>0.954</td>
+<td>0.948</td>
+<td>0.960</td>
+<td>0.997</td>
+<td>4.453</td>
+<td>4.888</td>
+<td>Excellent</td>
+<td>ab</td>
+</tr>
+<tr>
+<td>CN</td>
+<td>340</td>
+<td>4.087</td>
+<td>0.930</td>
+<td>0.922</td>
+<td>0.938</td>
+<td>0.994</td>
+<td>4.256</td>
+<td>4.853</td>
+<td>Excellent</td>
+<td>abc</td>
+</tr>
+<tr>
+<td>CT</td>
+<td>340</td>
+<td>4.407</td>
+<td>0.909</td>
+<td>0.900</td>
+<td>0.919</td>
+<td>0.982</td>
+<td>4.091</td>
+<td>4.738</td>
+<td>Excellent</td>
+<td>abc</td>
+</tr>
+<tr>
+<td>GPT_o4</td>
+<td>340</td>
+<td>4.534</td>
+<td>0.915</td>
+<td>0.906</td>
+<td>0.923</td>
+<td>0.994</td>
+<td>4.065</td>
+<td>4.691</td>
+<td>Excellent</td>
+<td>bc</td>
+</tr>
+<tr>
+<td>QwenT</td>
+<td>340</td>
+<td>4.571</td>
+<td>0.898</td>
+<td>0.888</td>
+<td>0.907</td>
+<td>0.974</td>
+<td>4.027</td>
+<td>4.700</td>
+<td>Excellent</td>
+<td>c</td>
+</tr>
+<tr>
+<td>V3</td>
+<td>340</td>
+<td>5.150</td>
+<td>0.868</td>
+<td>0.857</td>
+<td>0.879</td>
+<td>0.988</td>
+<td>3.662</td>
+<td>4.468</td>
+<td>Excellent (low reliability)</td>
+<td>d</td>
+</tr>
+<tr>
+<td>R1</td>
+<td>340</td>
+<td>5.379</td>
+<td>0.849</td>
+<td>0.838</td>
+<td>0.860</td>
+<td>0.979</td>
+<td>3.523</td>
+<td>4.423</td>
+<td>Good</td>
+<td>d</td>
+</tr>
+</tbody>
+</table>
+<h2>9. Limitations</h2>
+<ul>
+<li>Single LLM rater (gemini-3.1-pro-preview-low); ratings may carry the model's own framing biases.</li>
+<li>Prompt sensitivity is partly mitigated by the fixed prompt hash and bootstrap CIs.</li>
+<li>Reliability is intra-rater (same model, same prompt, same temperature); inter-rater agreement with an additional model would strengthen the validation.</li>
+<li>Intra-rater Spearman ρ in the 0.58–0.68 range on the Likert ordinal dimensions (<code>emotion_naturalness</code>, <code>emotion_coherence</code>) is comparable to the acceptable range for human survey raters on ordinal psychometric scales (Cicchetti, 1994: 0.60–0.74 “good”; 0.40–0.59 “fair”). Ceiling effects on <code>semantic_sim</code> (most items score 0.95–1.00) further compress the rank correlation: when a dimension has little true variance, ρ is dominated by a small number of disagreements and underestimates agreement. Mean absolute difference (MAD) on naturalness/coherence is ≤0.35 of a Likert step, which is the more interpretable agreement metric in this regime.</li>
+</ul>

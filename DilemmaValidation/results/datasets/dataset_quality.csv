@@ -1,0 +1,9 @@
+variant,n_evaluated,n_failed,coverage_pct,mean_item_quality,semantic_pass_rate,mean_naturalness,mean_coherence,ci_lo,ci_hi,dataset_quality_grade
+CN,340,0,25.0,0.9348,0.9971,4.3088,4.8441,0.9274,0.9421,Excellent (low reliability)
+CT,340,0,25.0,0.9253,0.9882,4.2206,4.7824,0.9163,0.9335,Excellent (low reliability)
+R1,340,0,25.0,0.855,0.9618,3.5824,4.45,0.8428,0.8659,Excellent (low reliability)
+V3,340,0,25.0,0.8736,0.9912,3.6941,4.4853,0.863,0.8839,Excellent
+GPT_5,340,0,25.0,0.9573,0.9971,4.4853,4.8912,0.9512,0.9626,Excellent
+GPT_o4,340,0,25.0,0.9168,0.9941,4.0706,4.7147,0.9084,0.9253,Excellent
+QwenN,340,0,25.0,0.9586,1.0,4.5676,4.8912,0.9525,0.9647,Excellent (low reliability)
+QwenT,340,0,25.0,0.9006,0.9706,4.0382,4.6765,0.8897,0.9097,Excellent

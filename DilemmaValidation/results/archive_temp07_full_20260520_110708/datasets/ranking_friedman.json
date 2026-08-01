@@ -1,0 +1,11 @@
+{
+  "score": "item_quality",
+  "n_complete": 340,
+  "k": 8,
+  "friedman_chi2": 690.531230283911,
+  "friedman_p": 7.58582048278171e-145,
+  "alpha": 0.05,
+  "critical_difference": 0.5694257478837265,
+  "q_alpha": 3.031,
+  "citation": "Demsar (2006), Statistical Comparisons of Classifiers, JMLR 7, Table 5."
+}

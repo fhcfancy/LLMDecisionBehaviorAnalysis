@@ -1,0 +1,9 @@
+variant,n_complete,mean_rank,mean_item_quality,ci_lo,ci_hi,semantic_pass_rate,mean_naturalness,mean_coherence,grade,sig_group
+QwenN,340,3.023529411764706,0.9586,0.9525,0.9647,1.0,4.5676,4.8912,Excellent (low reliability),a
+GPT_5,340,3.1029411764705883,0.9573,0.9512,0.9626,0.9971,4.4853,4.8912,Excellent,a
+CN,340,3.9073529411764705,0.9348,0.9274,0.9421,0.9971,4.3088,4.8441,Excellent (low reliability),b
+CT,340,4.232352941176471,0.9253,0.9163,0.9335,0.9882,4.2206,4.7824,Excellent (low reliability),bc
+GPT_o4,340,4.5926470588235295,0.9168,0.9084,0.9253,0.9941,4.0706,4.7147,Excellent,cd
+QwenT,340,5.061764705882353,0.9006,0.8897,0.9097,0.9706,4.0382,4.6765,Excellent,d
+V3,340,5.804411764705883,0.8736,0.863,0.8839,0.9912,3.6941,4.4853,Excellent,e
+R1,340,6.275,0.855,0.8428,0.8659,0.9618,3.5824,4.45,Excellent (low reliability),e

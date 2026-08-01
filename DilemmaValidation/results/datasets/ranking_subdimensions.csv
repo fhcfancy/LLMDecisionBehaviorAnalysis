@@ -1,0 +1,25 @@
+dimension,variant,n_complete,mean_rank,mean_item_quality,ci_lo,ci_hi,semantic_pass_rate,mean_naturalness,mean_coherence,grade,sig_group
+semantic_sim,GPT_5,340,4.014705882352941,0.9573,0.9512,0.9626,0.9971,4.4853,4.8912,Excellent,a
+semantic_sim,GPT_o4,340,4.144117647058824,0.9168,0.9084,0.9253,0.9941,4.0706,4.7147,Excellent,ab
+semantic_sim,QwenN,340,4.402941176470589,0.9586,0.9525,0.9647,1.0,4.5676,4.8912,Excellent (low reliability),abc
+semantic_sim,V3,340,4.507352941176471,0.8736,0.863,0.8839,0.9912,3.6941,4.4853,Excellent,abc
+semantic_sim,CN,340,4.580882352941177,0.9348,0.9274,0.9421,0.9971,4.3088,4.8441,Excellent (low reliability),abc
+semantic_sim,CT,340,4.597058823529411,0.9253,0.9163,0.9335,0.9882,4.2206,4.7824,Excellent (low reliability),bc
+semantic_sim,R1,340,4.855882352941176,0.855,0.8428,0.8659,0.9618,3.5824,4.45,Excellent (low reliability),c
+semantic_sim,QwenT,340,4.897058823529412,0.9006,0.8897,0.9097,0.9706,4.0382,4.6765,Excellent,c
+emotion_naturalness,QwenN,340,3.0176470588235293,0.9586,0.9525,0.9647,1.0,4.5676,4.8912,Excellent (low reliability),a
+emotion_naturalness,GPT_5,340,3.301470588235294,0.9573,0.9512,0.9626,0.9971,4.4853,4.8912,Excellent,a
+emotion_naturalness,CN,340,3.9058823529411764,0.9348,0.9274,0.9421,0.9971,4.3088,4.8441,Excellent (low reliability),b
+emotion_naturalness,CT,340,4.177941176470588,0.9253,0.9163,0.9335,0.9882,4.2206,4.7824,Excellent (low reliability),bc
+emotion_naturalness,GPT_o4,340,4.722058823529411,0.9168,0.9084,0.9253,0.9941,4.0706,4.7147,Excellent,cd
+emotion_naturalness,QwenT,340,4.819117647058824,0.9006,0.8897,0.9097,0.9706,4.0382,4.6765,Excellent,d
+emotion_naturalness,V3,340,5.827941176470588,0.8736,0.863,0.8839,0.9912,3.6941,4.4853,Excellent,e
+emotion_naturalness,R1,340,6.227941176470588,0.855,0.8428,0.8659,0.9618,3.5824,4.45,Excellent (low reliability),e
+emotion_coherence,QwenN,340,3.9514705882352943,0.9586,0.9525,0.9647,1.0,4.5676,4.8912,Excellent (low reliability),a
+emotion_coherence,GPT_5,340,3.9794117647058824,0.9573,0.9512,0.9626,0.9971,4.4853,4.8912,Excellent,a
+emotion_coherence,CN,340,4.107352941176471,0.9348,0.9274,0.9421,0.9971,4.3088,4.8441,Excellent (low reliability),ab
+emotion_coherence,CT,340,4.280882352941177,0.9253,0.9163,0.9335,0.9882,4.2206,4.7824,Excellent (low reliability),ab
+emotion_coherence,GPT_o4,340,4.489705882352941,0.9168,0.9084,0.9253,0.9941,4.0706,4.7147,Excellent,ab
+emotion_coherence,QwenT,340,4.669117647058823,0.9006,0.8897,0.9097,0.9706,4.0382,4.6765,Excellent,bc
+emotion_coherence,V3,340,5.1838235294117645,0.8736,0.863,0.8839,0.9912,3.6941,4.4853,Excellent,cd
+emotion_coherence,R1,340,5.338235294117647,0.855,0.8428,0.8659,0.9618,3.5824,4.45,Excellent (low reliability),d

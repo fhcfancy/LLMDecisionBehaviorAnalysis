@@ -1,0 +1,14 @@
+metric,value,ci_low_pp,ci_high_pp,n
+Pooled deviation EA (pp),7.120515179392823,6.458141674333026,7.8196872125115,5435
+Pooled deviation EI (pp),12.235510579576816,11.315547378104876,13.192272309107636,5435
+Pooled deviation Neutral-CoT (pp),6.918123275068997,6.2373505059797605,7.636154553817845,5435
+"EA - Neutral-CoT (pp, paired)",0.20239190432382592,-0.33164673413063545,0.7911683532658698,5435
+"EI - Neutral-CoT (pp, paired)",5.317387304507819,4.434222631094756,6.200551977920882,5435
+Effect ratio EA/Neutral-CoT,1.029255319148936,0.9533550187068488,1.1195815514373961,5435
+Effect ratio EI/Neutral-CoT,1.7686170212765955,1.6088019559902202,1.9453576751117736,5435
+Paired McNemar (EA vs Neutral-CoT) pooled: b,135.0,,,281
+Paired McNemar (EA vs Neutral-CoT) pooled: c,146.0,,,281
+Paired McNemar (EA vs Neutral-CoT) pooled: p,0.5508078712262352,,,281
+Paired McNemar (EI vs Neutral-CoT) pooled: b,153.0,,,595
+Paired McNemar (EI vs Neutral-CoT) pooled: c,442.0,,,595
+Paired McNemar (EI vs Neutral-CoT) pooled: p,3.5979430596364726e-32,,,595

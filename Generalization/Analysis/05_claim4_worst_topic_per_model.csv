@@ -1,0 +1,13 @@
+model,mode,worst_topic_group,drift_rate,n,n_disagree
+GPT_5,Neutral-CoT,family,0.1,80,8
+GPT_o4,Neutral-CoT,event_daily_life,0.12658227848101267,79,10
+QwenN,Neutral-CoT,business_organization,0.1125,80,9
+QwenT,Neutral-CoT,event_daily_life,0.15,80,12
+GPT_5,EI,family,0.2,80,16
+GPT_o4,EI,issue_wildlife_human_environment,0.1875,80,15
+QwenN,EI,issue_crime_addiction,0.1625,80,13
+QwenT,EI,role_duty_responsibility,0.25,80,20
+GPT_5,EA,family,0.1125,80,9
+GPT_o4,EA,issue_crime_addiction,0.14285714285714285,77,11
+QwenN,EA,event_daily_life,0.1125,80,9
+QwenT,EA,business_organization,0.125,80,10

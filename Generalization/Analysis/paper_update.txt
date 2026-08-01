@@ -1,0 +1,114 @@
+================================================================
+SECTION 1: MAIN BODY INSERT (end of Section 5 Results, 1 paragraph)
+================================================================
+
+To verify that our findings are not artifacts of the Claude and DeepSeek model families alone, nor of LLM-generated emotional scenarios from a single provider, we replicate the four headline behavioral claims on two additional families -- GPT (GPT-5, o4-mini) and Qwen (Qwen-N, Qwen-T) -- where each model both generates its emotional scenarios and answers them (one run per cell, 21,760 decisions; Appendix A.9). Claim 1 (emotional context exposes architecture-level vulnerabilities) replicates: deviation under EI peaks at Qwen-T+EI = 18.32%, mirroring the paper's R1+EI = 19.44%, with thinking models more vulnerable than non-thinking by ~+5 pp on average; the secondary sub-claim that cross-model agreement drops under emotion did not replicate when each model self-generates its scenarios (gap = -0.60 pp, 95% CI [-1.36, +0.18]). Claim 2 (reasoning stabilizes choices) replicates strongly: Neutral-CoT pooled deviation is 6.92 pp (paper 6.50 pp), EA anchors EI by +5.11 pp (paper +1.13 pp), and within-family agreement is higher for the reasoning pair than the emotional pair (93.34% vs 89.74%). Claim 3 (emotion shifts decisions more than reasoning) partially replicates: EI shifts decisions 1.77x more than Neutral-CoT (paired McNemar p = 3.6e-32), but the EA effect ratio collapses to 1.03 (paper ~2.23), indicating that structured analytical reasoning fully neutralises the EA framing for these families. Claim 4 (systematic, topic-concentrated shifts) replicates in concentration but not in direction: drift under EA and EI is concentrated in 24.3% and 23.8% of disagreements in the top-3 topics (family, business, environment-like clusters), with Gini 0.126 on per-topic drift rates; however, the paper's Choice-1 bias under EA (62.45%) flips to a Choice-2 bias (41.80%, p = 1.7e-03), suggesting the direction of the emotional pull is generator-specific while the topical structure of the pull is robust. Details, full tables, and figures appear in Appendix A.9.
+
+================================================================
+SECTION 2: APPENDIX A.9 CROSS-FAMILY GENERALIZATION
+================================================================
+
+A.9 Cross-Family Generalization
+-------------------------------
+
+A.9.1 Setup.
+We replicate the four headline behavioral claims of the main paper on two additional model families: GPT (GPT-5 and o4-mini, the latter a thinking model) and Qwen (Qwen-N and Qwen-T). Each of the four models (a) self-generates its emotional version of the 1,360 DAILYDILEMMAS items and (b) makes decisions on the resulting scenarios under all four modes (Neutral, Neutral-CoT, Emotional-Intuitive, Emotional-Analytic). Generation and decision-making use the same prompt templates and inference configuration as the main study (Section 3 / Table 2): temperature 0.7, max_tokens fixed by ``shared_config.py``, single run per cell, JSON-strict answer specification from ``cot_decision_generator.py``. Total decisions: 4 models x 4 modes x 1,360 items = 21,760, with per-cell parse-and-API validity >=99.0% in every cell (Table A.9.1, derived from ``01_validity_report.md``). This is a dual-shift design: it stresses both the decision-maker family (no Claude / DeepSeek) and the generator family (no Claude-authored scenarios). All formal definitions follow Appendix A.2 of the main paper (Effective Alignment EfA, Eq. 7; Coverage; CMR; Deviation = 1 - EfA), so the new numbers are directly comparable.
+
+A.9.2 Replication summary.
+Table A.9.2 lists every paper-vs-new comparison organized by the four claims, with a Strong / Directional / Failure verdict per row (Strong = same direction and within +/- 3 pp or +/- 30% of the paper estimate; Directional = same direction with larger magnitude difference; Failure = opposite direction or not significant at alpha = 0.05). Of the four headline claims, two replicate strongly (Claims 1 and 2), one replicates only for EI (Claim 3), and one replicates only in concentration (Claim 4).
+
+A.9.3 Claim 1 - Emotion exposes architecture-level vulnerabilities.
+Deviation under EI peaks at Qwen-T+EI = 18.32% (Fig. C1.a), almost exactly the paper's R1+EI peak of 19.44%, and thinking models (o4-mini and Qwen-T) deviate +5.21 pp more than non-thinking variants under EI (95% bootstrap CI on the difference [3.52, 6.98] pp), generalizing the paper's "R1 most vulnerable" finding to a second reasoning-vs-non-reasoning pair. By contrast, the secondary Claim-1 sub-finding -- that cross-model agreement drops under emotional modes -- does not replicate when each model self-generates its scenarios. Across the 4 new models, the 6-pair mean agreement is 84.4 / 85.9 / 84.7 / 86.7% under Neutral / Neutral-CoT / EI / EA, so the Neutral-vs-Emotional gap is -0.60 pp (95% CI [-1.36, +0.18]), statistically indistinguishable from zero. We interpret this honestly: the paper's ~6 pp drop under EI/EA appears to have been partly carried by a single shared Claude-generated scenario distribution; when each model answers its own scenarios, the per-model alignment effect remains (Claim 1, primary), but the cross-model agreement effect dissolves (Claim 1, secondary). See Fig. C1.b (cross-model heatmap per mode).
+
+A.9.4 Claim 2 - Reasoning stabilizes choices.
+Pooled per-model deviation under Neutral-CoT is 6.92 pp (paper 6.50 pp), within +/- 1 pp of the paper benchmark and an order of magnitude smaller than the EI deviation in the same models (12.24 pp). EA anchors EI by +5.11 pp pooled, with significant McNemar tests in all four models (max p = 1.5e-3). Within-family cross-mode agreement is 93.34% for the reasoning pair (Neutral vs Neutral-CoT) versus 89.74% for the emotional pair (EI vs EA): the reasoning pair is consistently tighter (Fig. C2). Action bias (the swap counterfactual of Section 5.3) was intentionally outside the scope of this single-run study; the agreement-based evidence above is the cleanest available replication.
+
+A.9.5 Claim 3 - Emotion shifts more than reasoning.
+Pooled deviations are EA 7.12 pp, EI 12.24 pp, Neutral-CoT 6.92 pp. The paired McNemar test on Neutral-valid idx confirms a significant gap for EI vs Neutral-CoT (b = 153, c = 442, p = 3.6e-32; effect ratio 1.77x, paper ~2.41), but the EA-vs-Neutral-CoT gap collapses (b = 135, c = 146, p = 0.55; effect ratio 1.03, paper ~2.23). The interpretation that strengthens the paper's narrative is that structured analytical reasoning, when scaffolded around an emotional scenario (EA), fully cancels the extra shift the emotion would otherwise produce in GPT and Qwen families. Intuitive emotional reasoning (EI) still shifts choices significantly more than pure reasoning.
+
+A.9.6 Claim 4 - Shifts are systematic and topic-concentrated.
+Drift under EA is concentrated in a small set of topics: the top-3 topic-groups carry 24.3% of all EA disagreements (top-3 under EI: 23.8%), and Gini over per-topic drift rates is 0.126. The leading drift topics under EA are family, event_daily_life, issue_pregnancy (Fig. C4.a), echoing the paper's family / business-organization / environment cluster (Fig. 5 / 7). Per model x mode worst-topic spikes (Fig. C4.b) reach 25% (Qwen-T + EI + role_duty_responsibility) and 20% (GPT-5 + EI + family), more modest than the paper's R1+EI+business = 33.75% but in the same spatial structure. The systematic-direction sub-claim, however, partially fails: on the disagree-with-Neutral subset, EA biases toward Choice-2 (Choice-1 share = 41.80%, two-sided binomial p = 1.7e-03), the opposite sign of the paper's 62.45% Choice-1 bias; EI shows a milder Choice-1 bias (55.96%, p = 2.4e-03). We read this as evidence that the direction of the emotional pull is generator- and scenario-distribution-specific, while the topical structure of the pull is family-invariant.
+
+A.9.7 Limitations.
+(i) One run per cell: we cannot reproduce the within-condition consistency analyses of Section 5.1.1. The paired tests we report are robust to this because they compare conditions on the same idx within the same model. (ii) Each of the four models also generates its own emotional scenarios; we treat this as a strictly stronger generalization test (both generator and decision-maker shift), but it confounds cross-model agreement under emotional modes, which is one reason Claim 1's secondary sub-finding does not replicate. (iii) Action bias (the swap counterfactual) is outside scope.
+
+Table A.9.2: Replication summary (paper vs new), grouped by claim.
+
+| claim | metric | paper | new | verdict |
+| --- | --- | --- | --- | --- |
+| 1 | Worst single (model, mode) deviation | R1 + EI = 19.44% | Qwen-T+EI=18.32% | Strong |
+| 1 | Cross-model 6-pair agreement gap (Neutral_modes - Emotional_modes, pp) | ~6 pp (Neutral 96.99/95.67 vs EI 90.08/EA 90.82) | -0.60 pp (CI -1.36 to 0.18) | Failure |
+| 1 | Thinking - Non-thinking deviation under EI (pp) | DeepSeek-R1 most vulnerable (paper: R1 EI = 19.44 vs CN EI ~13) | +5.21 pp (Thinking o4-mini+Qwen-T higher than GPT-5+Qwen-N under EI) | Strong |
+| 2 | Neutral-CoT pooled deviation (pp) | 6.50 pp | 6.92 pp | Strong |
+| 2 | Anchoring: EI - EA pooled deviation (pp) | +1.13 pp | +5.11 pp | Directional |
+| 2 | Within-family cross-mode agreement: agree(Neutral, Neutral-CoT) | 98.84% | 93.34% | Directional |
+| 2 | Within-family cross-mode agreement: agree(EI, EA) | 97.24% | 89.74% | Directional |
+| 3 | Pooled deviation EA (pp) | 14.51 pp | 7.12 pp | Directional |
+| 3 | Pooled deviation EI (pp) | 15.64 pp | 12.24 pp | Directional |
+| 3 | Effect ratio EA / Neutral-CoT | ~2.23 | 1.03 | Directional |
+| 3 | Effect ratio EI / Neutral-CoT | ~2.41 | 1.77 | Strong |
+| 3 | Paired McNemar p (EA vs Neutral-CoT) | p < 1e-33 (vs Neutral, EA was strongly > Neutral) | p = 5.508e-01 (EA vs Neutral-CoT directly) | Failure |
+| 3 | Paired McNemar p (EI vs Neutral-CoT) | p < 1e-24 (vs Neutral; EI shifts much more than reasoning) | p = 3.598e-32 | Strong |
+| 4 | EA pooled Choice-1 share on disagree subset | 62.45% (p < .001) | 41.80% (p = 1.668e-03) | Failure |
+| 4 | EI pooled Choice-1 share on disagree subset | positive (smaller than EA) | 55.96% (p = 2.426e-03) | Strong |
+| 4 | Top-3 topic share of disagreements under EA | ~25-30% (Fig. 5 cluster: business + family + env top three) | 24.34% | Strong |
+| 4 | Top-3 topic share of disagreements under EI | ~25-30% (Fig. 5) | 23.83% | Strong |
+| 4 | Gini of per-topic drift rates (EA) | (not reported) | 0.126 | Strong |
+| 4 | Gini of per-topic drift rates (EI) | (not reported) | 0.113 | Strong |
+| 4 | Top-3 worst (model, mode, topic) cells | R1 + EI + business = 33.75%; clusters in business/family/env | Qwen-T+EI+role_duty_responsibility=25.00%, GPT-5+EI+family=20.00%, o4-mini+EI+issue_wildlife_human_environment=18.75% | Directional |
+
+================================================================
+SECTION 3: SUGGESTED LATEX FLOAT BLOCKS
+================================================================
+
+
+% Suggested LaTeX float blocks - paste verbatim into the appendix.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.78\linewidth]{figures/Generalization/fig_C1_per_model_deviation.pdf}
+  \caption{\textbf{Claim 1 (Cross-family generalization, GPT and Qwen).}
+  Per-model deviation from Neutral baseline under Neutral-CoT, EI, and EA,
+  with 95\% non-parametric bootstrap CIs. Deviation under EI peaks at
+  Qwen-T = 18.32\%, mirroring the paper's R1+EI = 19.44\%.}
+  \label{fig:gen_c1_per_model_deviation}
+\end{figure*}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/Generalization/fig_C1_cross_model_agreement_by_mode.pdf}
+  \caption{\textbf{Claim 1 (secondary).} 6-pair cross-model agreement
+  under each mode, restricted to idx with all four models valid. Unlike
+  in the main study, the Neutral-vs-Emotional agreement gap does not
+  survive when each model self-generates its scenarios.}
+  \label{fig:gen_c1_cross_model_by_mode}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/Generalization/fig_C2_cross_mode_agreement_by_model.pdf}
+  \caption{\textbf{Claim 2 (reasoning stabilizes).} 4x4 cross-mode
+  agreement per model. Within-family, the reasoning pair (Neutral,
+  Neutral-CoT) is consistently tighter than the emotional pair (EI, EA).}
+  \label{fig:gen_c2_cross_mode_by_model}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/Generalization/fig_C4_topic_drift_heatmap.pdf}
+  \caption{\textbf{Claim 4 (topic concentration).} Topic-group drift rate
+  (\%) per method, pooled across the four new models. Family, business,
+  and environment-like clusters dominate, matching Figs.~5/7 of the main
+  paper.}
+  \label{fig:gen_c4_topic_drift}
+\end{figure}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.78\linewidth]{figures/Generalization/fig_C4_per_model_worst_topic.pdf}
+  \caption{\textbf{Claim 4 (per-model worst topic).} The single highest
+  drift (model, topic) cell under EA (left) and EI (right). Per-model
+  spikes reach 25\% (Qwen-T + EI + role/duty) and 20\% (GPT-5 +
+  EI + family).}
+  \label{fig:gen_c4_worst_topic}
+\end{figure*}

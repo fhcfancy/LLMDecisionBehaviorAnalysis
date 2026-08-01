@@ -1,0 +1,4 @@
+mode,n_topics,n_total_disagreements,top3_topic_share_of_disagreements,gini_over_drift_rates,max_topic_drift_rate,max_topic_group
+Neutral-CoT,17,361,0.24930747922437674,0.15359108598801968,0.096875,family
+EI,17,663,0.2383107088989442,0.11316241241205581,0.178125,family
+EA,17,378,0.24338624338624337,0.125719668382116,0.109375,family
