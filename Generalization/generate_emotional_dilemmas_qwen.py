@@ -11,7 +11,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
-API_URL = "https://aigc-api.hkust-gz.edu.cn/v1/chat/completions"
+# An OpenAI-compatible gateway exposing /v1/chat/completions.
+API_URL = os.getenv("QWEN_API_URL", "")
 INPUT_CSV = f"{REPO_ROOT}/Dilemma/NeutralDilemma.csv"
 OUTPUT_DIR = f"{REPO_ROOT}/Generalization/generated_emotional_dilemmas"
 MODEL_NAME = "Qwen"
@@ -196,9 +197,12 @@ def run_generation(api_key: str) -> None:
 
 if __name__ == "__main__":
     # Set env var before running:
-    # export HKUST_API_KEY='your_key'
-    api_key = os.getenv("HKUST_API_KEY", "")
+    # export QWEN_API_URL='https://<gateway>/v1/chat/completions'
+    # export QWEN_API_KEY='your_key'
+    if not API_URL:
+        raise ValueError("Missing endpoint. Set environment variable QWEN_API_URL.")
+    api_key = os.getenv("QWEN_API_KEY", "")
     if not api_key:
-        raise ValueError("Missing API key. Set environment variable HKUST_API_KEY.")
+        raise ValueError("Missing API key. Set environment variable QWEN_API_KEY.")
 
     run_generation(api_key)

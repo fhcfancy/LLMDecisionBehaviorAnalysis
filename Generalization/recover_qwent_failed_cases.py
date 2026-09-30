@@ -14,7 +14,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
-API_URL = "https://aigc-api.hkust-gz.edu.cn/v1/chat/completions"
+# An OpenAI-compatible gateway exposing /v1/chat/completions.
+API_URL = os.getenv("QWEN_API_URL", "")
 MODEL_NAME = "Qwen"
 ENABLE_THINKING = True
 
@@ -336,7 +337,9 @@ def run_recovery(api_key: str) -> None:
 if __name__ == "__main__":
     # Optional:
     #   export FAILED_IDX_LIST="10634,10713,10771"
-    api_key = os.getenv("HKUST_API_KEY", "").strip()
+    if not API_URL:
+        raise ValueError("Missing endpoint. Set environment variable QWEN_API_URL.")
+    api_key = os.getenv("QWEN_API_KEY", "").strip()
     if not api_key:
-        raise ValueError("Missing API key. Set environment variable HKUST_API_KEY.")
+        raise ValueError("Missing API key. Set environment variable QWEN_API_KEY.")
     run_recovery(api_key)

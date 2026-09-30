@@ -32,7 +32,14 @@ Some scripts call external LLM APIs. Set the required API keys as environment va
 
 ```bash
 export AIGCBEST_API_KEY="<your key>"
-export HKUST_API_KEY="<your key>"
+export QWEN_API_KEY="<your key>"
+```
+
+The Qwen runs in `Generalization/` went through an OpenAI-compatible gateway
+rather than a public endpoint, so its host is read from the environment too:
+
+```bash
+export QWEN_API_URL="https://<gateway>/v1/chat/completions"
 ```
 
 ## Reproducing

@@ -16,6 +16,10 @@ INPUT_GENERALIZATION = (
 # Output base for generated decisions.
 OUTPUT_BASE = f"{REPO_ROOT}/Generalization/decisions"
 
+# The Qwen variants were served through an OpenAI-compatible gateway rather
+# than a public endpoint, so the host is supplied from the environment.
+QWEN_API_URL = os.getenv("QWEN_API_URL", "")
+
 MODEL_CONFIGS = {
     "GPT_5": {
         "api_url": "https://api2.aigcbest.top/v1/chat/completions",
@@ -28,15 +32,15 @@ MODEL_CONFIGS = {
         "api_key_env": "AIGCBEST_API_KEY",
     },
     "QwenT": {
-        "api_url": "https://aigc-api.hkust-gz.edu.cn/v1/chat/completions",
+        "api_url": QWEN_API_URL,
         "model_name": "Qwen",
-        "api_key_env": "HKUST_API_KEY",
+        "api_key_env": "QWEN_API_KEY",
         "enable_thinking": True,
     },
     "QwenN": {
-        "api_url": "https://aigc-api.hkust-gz.edu.cn/v1/chat/completions",
+        "api_url": QWEN_API_URL,
         "model_name": "Qwen",
-        "api_key_env": "HKUST_API_KEY",
+        "api_key_env": "QWEN_API_KEY",
         "enable_thinking": False,
     },
 }
