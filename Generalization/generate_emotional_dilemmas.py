@@ -6,11 +6,14 @@ from typing import Any
 
 import pandas as pd
 import requests
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 API_URL = "https://api2.aigcbest.top/v1/chat/completions"
-INPUT_CSV = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/NeutralDilemma.csv"
-OUTPUT_DIR = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/generated_emotional_dilemmas"
+INPUT_CSV = f"{REPO_ROOT}/Dilemma/NeutralDilemma.csv"
+OUTPUT_DIR = f"{REPO_ROOT}/Generalization/generated_emotional_dilemmas"
 MODEL_OUTPUT_NAMES = {
     "gpt-5-chat-latest": "GPT_5",
     "o4-mini": "GPT_o4",

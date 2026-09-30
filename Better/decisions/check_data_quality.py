@@ -11,7 +11,9 @@ import os
 from collections import defaultdict
 from pathlib import Path
 
-BASE = Path("/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+BASE = Path(f"{REPO_ROOT}/Better/decisions")
 DIRS = ["EmotionalAnalytic", "EmotionalIntuitive", "Neutral", "Neutral-CoT"]
 
 # Column that contains the scenario (emotional vs neutral)

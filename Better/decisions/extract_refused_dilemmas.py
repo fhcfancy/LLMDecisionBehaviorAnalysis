@@ -1,6 +1,9 @@
 import pandas as pd
+from pathlib import Path
 
-filepath = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions/Neutral/Neutral_CN_1.csv"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+filepath = f"{REPO_ROOT}/Better/decisions/Neutral/Neutral_CN_1.csv"
 target_idxs = [24502, 31266, 11101, 29454]
 
 df = pd.read_csv(filepath)

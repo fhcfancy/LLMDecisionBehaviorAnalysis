@@ -1,8 +1,11 @@
 import os
 import pandas as pd
 import glob
+from pathlib import Path
 
-base_dir = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+base_dir = f"{REPO_ROOT}/Better/decisions"
 target_idx = 24502
 
 modes = ["EmotionalAnalytic", "EmotionalIntuitive", "Neutral", "Neutral-CoT"]

@@ -2,8 +2,7 @@
 Prompt strings and JSON-response parser/validator for the
 DilemmaValidation experiment.
 
-The SYSTEM and USER_TEMPLATE strings are verbatim from plan section 3
-(see /Users/carina/.cursor/plans/dilemma_validation_experiment_baa1d0aa.plan.md).
+The SYSTEM and USER_TEMPLATE strings are verbatim from plan section 3.
 Do not edit them without updating the plan.
 """
 
@@ -12,6 +11,9 @@ from __future__ import annotations
 import json
 import re
 from typing import Any
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 SYSTEM: str = """You are participating in a research study as a human survey respondent.

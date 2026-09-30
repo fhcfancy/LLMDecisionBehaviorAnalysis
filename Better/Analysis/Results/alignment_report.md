@@ -4,7 +4,7 @@
 - Models: CN, CT, R1, V3
 - Runs: 1, 2, 3 (each run uses each model's Neutral baseline)
 - Modes: Neutral (reference), Neutral-CoT, EI, EA
-- Decisions directory: `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions`
+- Decisions directory: `Better/decisions`
 
 ## Metrics
 - `strict_match_rate`: Match rate on all-4-valid idx (same denominator fairness).

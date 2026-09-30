@@ -9,23 +9,26 @@ from typing import Any
 
 import pandas as pd
 import requests
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 API_URL = "https://aigc-api.hkust-gz.edu.cn/v1/chat/completions"
 MODEL_NAME = "Qwen"
 ENABLE_THINKING = True
 
-INPUT_CSV = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/NeutralDilemma.csv"
+INPUT_CSV = f"{REPO_ROOT}/Dilemma/NeutralDilemma.csv"
 MAIN_OUTPUT_CSV = (
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/"
+    f"{REPO_ROOT}/Generalization/"
     "generated_emotional_dilemmas/QwenT_emotional_dilemma.csv"
 )
 PATCH_OUTPUT_CSV = (
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/"
+    f"{REPO_ROOT}/Generalization/"
     "generated_emotional_dilemmas/QwenT_emotional_dilemma_recovered.csv"
 )
 FAILED_IDX_LOG = (
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/"
+    f"{REPO_ROOT}/Generalization/"
     "generated_emotional_dilemmas/QwenT_recover_failed_idx.txt"
 )
 

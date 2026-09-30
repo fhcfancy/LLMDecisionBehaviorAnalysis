@@ -1,8 +1,8 @@
 # Generalization Data Validity Report
 
-- Reference dilemma set: `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma/NeutralDilemma.csv` (N=1360 idx).
-- Decision CSV root: `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/decisions`.
-- Topic labels: `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/dilemmas_with_detail_by_action.csv`.
+- Reference dilemma set: `Dilemma/NeutralDilemma.csv` (N=1360 idx).
+- Decision CSV root: `Generalization/decisions`.
+- Topic labels: `dilemmas_with_detail_by_action.csv`.
 - Cells: 4 models x 4 modes = 16; one run per cell.
 - Total rows in long frame (reference x model x mode): 21,760.
 

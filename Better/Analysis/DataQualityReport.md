@@ -6,7 +6,7 @@
 
 ## EmotionalAnalytic
 
-- **Location:** `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions/EmotionalAnalytic`
+- **Location:** `Better/decisions/EmotionalAnalytic`
 - **Files:** 12 (EA_CN_1.csv, EA_CN_2.csv, EA_CN_3.csv, EA_CT_1.csv, EA_CT_2.csv, EA_CT_3.csv, EA_R1_1.csv, EA_R1_2.csv, EA_R1_3.csv, EA_V3_1.csv, EA_V3_2.csv, EA_V3_3.csv)
 
 ### Aggregate metrics
@@ -54,7 +54,7 @@
 
 ## EmotionalIntuitive
 
-- **Location:** `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions/EmotionalIntuitive`
+- **Location:** `Better/decisions/EmotionalIntuitive`
 - **Files:** 12 (EI_CN_1.csv, EI_CN_2.csv, EI_CN_3.csv, EI_CT_1.csv, EI_CT_2.csv, EI_CT_3.csv, EI_R1_1.csv, EI_R1_2.csv, EI_R1_3.csv, EI_V3_1.csv, EI_V3_2.csv, EI_V3_3.csv)
 
 ### Aggregate metrics
@@ -102,7 +102,7 @@
 
 ## Neutral
 
-- **Location:** `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions/Neutral`
+- **Location:** `Better/decisions/Neutral`
 - **Files:** 12 (Neutral_CN_1.csv, Neutral_CN_2.csv, Neutral_CN_3.csv, Neutral_CT_1.csv, Neutral_CT_2.csv, Neutral_CT_3.csv, Neutral_R1_1.csv, Neutral_R1_2.csv, Neutral_R1_3.csv, Neutral_V3_1.csv, Neutral_V3_2.csv, Neutral_V3_3.csv)
 
 ### Aggregate metrics
@@ -150,7 +150,7 @@
 
 ## Neutral-CoT
 
-- **Location:** `/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions/Neutral-CoT`
+- **Location:** `Better/decisions/Neutral-CoT`
 - **Files:** 12 (Neutral-CoT_CN_1.csv, Neutral-CoT_CN_2.csv, Neutral-CoT_CN_3.csv, Neutral-CoT_CT_1.csv, Neutral-CoT_CT_2.csv, Neutral-CoT_CT_3.csv, Neutral-CoT_R1_1.csv, Neutral-CoT_R1_2.csv, Neutral-CoT_R1_3.csv, Neutral-CoT_V3_1.csv, Neutral-CoT_V3_2.csv, Neutral-CoT_V3_3.csv)
 
 ### Aggregate metrics

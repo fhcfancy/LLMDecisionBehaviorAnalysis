@@ -5,8 +5,6 @@ dilemma variants against the neutral baseline on (a) semantic equivalence
 and (b) emotional authenticity, in a single API call per item. Includes a
 10 % test-retest reliability pass.
 
-Reference plan:
-`/Users/carina/.cursor/plans/dilemma_validation_experiment_baa1d0aa.plan.md`
 
 ## Layout
 

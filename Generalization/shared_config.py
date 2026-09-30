@@ -3,15 +3,18 @@ Aligned configuration for Generalization-mode generators.
 """
 
 import os
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Input data produced by generalization dilemma builders.
 INPUT_GENERALIZATION = (
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/"
+    f"{REPO_ROOT}/Generalization/"
     "generated_emotional_dilemmas"
 )
 
 # Output base for generated decisions.
-OUTPUT_BASE = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/decisions"
+OUTPUT_BASE = f"{REPO_ROOT}/Generalization/decisions"
 
 MODEL_CONFIGS = {
     "GPT_5": {

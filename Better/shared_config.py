@@ -5,14 +5,17 @@ Goal: keep reasoning logic differences (EA/EI/Neutral) while removing technical 
 """
 
 import os
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Input data 
-INPUT_DILEMMA = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma"
+INPUT_DILEMMA = f"{REPO_ROOT}/Dilemma"
 INPUT_EMOTIONAL = INPUT_DILEMMA
 INPUT_NEUTRAL = INPUT_DILEMMA
 
 # Output base 
-OUTPUT_BASE = "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Better/decisions"
+OUTPUT_BASE = f"{REPO_ROOT}/Better/decisions"
 
 MODEL_CONFIGS = {
     "DeepSeekV3": {

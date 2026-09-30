@@ -4,8 +4,6 @@ Central configuration for the DilemmaValidation experiment.
 This module is the single source of truth for paths, the dataset registry,
 API parameters, scoring weights, and grade thresholds. All other modules
 import from here so paths and constants stay consistent across the pipeline.
-
-Reference plan: /Users/carina/.cursor/plans/dilemma_validation_experiment_baa1d0aa.plan.md
 """
 
 from __future__ import annotations
@@ -16,14 +14,10 @@ from pathlib import Path
 
 
 ROOT_DIR: Path = Path(__file__).resolve().parent
+REPO_ROOT: Path = ROOT_DIR.parent
 
-DILEMMA_DIR: Path = Path(
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Dilemma"
-)
-GEN_DIR: Path = Path(
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/"
-    "Generalization/generated_emotional_dilemmas"
-)
+DILEMMA_DIR: Path = REPO_ROOT / "Dilemma"
+GEN_DIR: Path = REPO_ROOT / "Generalization" / "generated_emotional_dilemmas"
 
 NEUTRAL_CSV: Path = DILEMMA_DIR / "NeutralDilemma.csv"
 
@@ -55,10 +49,7 @@ SAMPLED_IDX_CSV: Path = SAMPLING_DIR / "sampled_idx.csv"
 HUMAN_VALIDATION_PACK_CSV: Path = SAMPLING_DIR / "human_validation_pack.csv"
 SAMPLING_REPORT_MD: Path = SAMPLING_DIR / "sampling_report.md"
 SAMPLING_MANIFEST_JSON: Path = SAMPLING_DIR / "manifest.json"
-TOPIC_REFERENCE_CSV: Path = Path(
-    "/Users/carina/Documents/MyResearch/Professional/DataAnalysis/"
-    "dilemmas_with_detail_by_action.csv"
-)
+TOPIC_REFERENCE_CSV: Path = REPO_ROOT / "dilemmas_with_detail_by_action.csv"
 
 RUN_LOG: Path = LOGS_DIR / "run_validation.log"
 FAILED_ITEMS_CSV: Path = LOGS_DIR / "failed_items.csv"

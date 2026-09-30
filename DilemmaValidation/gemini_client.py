@@ -9,7 +9,7 @@ Wraps `requests.post` against the OpenAI-compatible aigcbest proxy with:
   * one strict-JSON clarification retry and one refusal-reframe retry
 
 Pattern adapted from
-/Users/carina/Documents/MyResearch/Professional/DataAnalysis/Generalization/recover_qwent_failed_cases.py
+Generalization/recover_qwent_failed_cases.py
 """
 
 from __future__ import annotations
@@ -37,6 +37,9 @@ from config import (
     get_api_key,
 )
 from prompts import SYSTEM, parse_and_validate, render_user_prompt
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 _PARSE_RETRY_USER_MSG: str = (
